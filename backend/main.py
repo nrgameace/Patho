@@ -12,6 +12,23 @@ SURVEILLANCE_PATH = os.path.join(os.path.dirname(__file__), "data", "case_survei
 PREDICTIONS_PATH  = os.path.join(os.path.dirname(__file__), "data", "predictions.csv")
 TITLE_FIX = {"District Of Columbia": "District of Columbia"}
 
+STATE_ABBREV = {
+    "Alabama": "AL", "Alaska": "AK", "Arizona": "AZ", "Arkansas": "AR",
+    "California": "CA", "Colorado": "CO", "Connecticut": "CT", "Delaware": "DE",
+    "District of Columbia": "DC", "Florida": "FL", "Georgia": "GA", "Hawaii": "HI",
+    "Idaho": "ID", "Illinois": "IL", "Indiana": "IN", "Iowa": "IA",
+    "Kansas": "KS", "Kentucky": "KY", "Louisiana": "LA", "Maine": "ME",
+    "Maryland": "MD", "Massachusetts": "MA", "Michigan": "MI", "Minnesota": "MN",
+    "Mississippi": "MS", "Missouri": "MO", "Montana": "MT", "Nebraska": "NE",
+    "Nevada": "NV", "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM",
+    "New York": "NY", "North Carolina": "NC", "North Dakota": "ND", "Ohio": "OH",
+    "Oklahoma": "OK", "Oregon": "OR", "Pennsylvania": "PA", "Rhode Island": "RI",
+    "South Carolina": "SC", "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX",
+    "Utah": "UT", "Vermont": "VT", "Virginia": "VA", "Washington": "WA",
+    "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY",
+}
+ABBREV_TO_STATE = {v: k for k, v in STATE_ABBREV.items()}
+
 _STATE_INDEX: dict[str, list[dict]] = {}
 _YEARS: list[int] = []
 _HESITANCY_BY_STATE: dict[str, list[dict]] = {}
@@ -84,6 +101,24 @@ class CountyPrediction(BaseModel):
     deaths: int
 
 
+class StateCountiesRequest(BaseModel):
+    stateCode: str
+
+
+class CountyYearData(BaseModel):
+    id: str
+    name: str
+    cases: dict[int, int]
+    deaths: dict[int, int]
+
+
+class StateYearData(BaseModel):
+    id: str
+    name: str
+    cases: dict[int, int]
+    deaths: dict[int, int]
+
+
 def _load_data() -> None:
     global _STATE_INDEX, _YEARS, _HESITANCY_BY_STATE, _HESITANCY_BY_FIPS, _SURVEILLANCE_BY_FIPS, _PREDICTIONS_INDEX
 
@@ -124,7 +159,7 @@ def _load_data() -> None:
     sdf = pd.read_csv(SURVEILLANCE_PATH)
     sdf["res_state"]        = sdf["res_state"].str.strip().str.title()
     sdf["res_county"]       = sdf["res_county"].str.strip().str.title()
-    sdf["county_fips_code"] = sdf["county_fips_code"].astype(str).str.strip().str.zfill(5)
+    sdf["county_fips_code"] = pd.to_numeric(sdf["county_fips_code"], errors="coerce").fillna(0).astype(int).astype(str).str.zfill(5)
     sdf["case_month"]       = sdf["case_month"].astype(str).str.strip()
     for col in ["total_cases", "deaths", "hospitalizations", "icu_admissions"]:
         sdf[col] = pd.to_numeric(sdf[col], errors="coerce").fillna(0).astype(int)
@@ -135,7 +170,7 @@ def _load_data() -> None:
     pdf = pd.read_csv(PREDICTIONS_PATH)
     pdf["fips"]     = pdf["fips"].astype(str).str.strip().str.zfill(5)
     pdf["county"]   = pdf["county"].str.strip().str.title()
-    pdf["state"]    = pdf["state"].str.strip().str.title()
+    pdf["state"]    = pdf["state"].str.strip().str.title().replace(TITLE_FIX)
     pdf["year"]     = pd.to_numeric(pdf["year"], errors="coerce").fillna(0).astype(int)
     pdf["infected"] = pd.to_numeric(pdf["infected"], errors="coerce").fillna(0).astype(int)
     pdf["deaths"]   = pd.to_numeric(pdf["deaths"], errors="coerce").fillna(0).astype(int)
@@ -255,6 +290,66 @@ def get_predictions(body: PredictionRequest) -> list[CountyPrediction]:
         )
         for r in rows
     ]
+
+
+@app.get("/api/getAllStateData", response_model=list[StateYearData])
+def get_all_state_data() -> list[StateYearData]:
+    all_years = list(range(2020, 2029))
+    results = []
+    for state_name, rows in _STATE_INDEX.items():
+        abbrev = STATE_ABBREV.get(state_name)
+        if not abbrev:
+            continue
+        cases: dict[int, int] = {}
+        deaths: dict[int, int] = {}
+        for yr in all_years:
+            if yr <= 2024:
+                point = _query_state(state_name, rows, yr, 6)
+                cases[yr] = point.infected
+                deaths[yr] = point.deaths
+            else:
+                preds = _PREDICTIONS_INDEX.get((state_name, yr), [])
+                cases[yr] = sum(int(r["infected"]) for r in preds)
+                deaths[yr] = sum(int(r["deaths"]) for r in preds)
+        results.append(StateYearData(id=abbrev, name=state_name, cases=cases, deaths=deaths))
+    return sorted(results, key=lambda r: r.name)
+
+
+@app.post("/api/getStateCounties", response_model=list[CountyYearData])
+def get_state_counties(body: StateCountiesRequest) -> list[CountyYearData]:
+    state_code = body.stateCode.strip().upper()
+    full_state_name = ABBREV_TO_STATE.get(state_code, "")
+    hesitancy_rows = _HESITANCY_BY_STATE.get(state_code, [])
+    fips_set = {r["fips_code"] for r in hesitancy_rows}
+    county_names: dict[str, str] = {}
+    for r in hesitancy_rows:
+        raw_name = r["county_name"]
+        name = raw_name.rsplit(",", 1)[0].strip() if "," in raw_name else raw_name
+        county_names[r["fips_code"]] = name
+    for yr in range(2025, 2029):
+        for r in _PREDICTIONS_INDEX.get((full_state_name, yr), []):
+            fips = r["fips"]
+            fips_set.add(fips)
+            if fips not in county_names:
+                county_names[fips] = r["county"]
+    results = []
+    for fips in sorted(fips_set):
+        cases: dict[int, int] = {}
+        deaths: dict[int, int] = {}
+        surv_rows = _SURVEILLANCE_BY_FIPS.get(fips, [])
+        for r in surv_rows:
+            yr = int(r["case_month"][:4])
+            cases[yr] = cases.get(yr, 0) + int(r["total_cases"])
+            deaths[yr] = deaths.get(yr, 0) + int(r["deaths"])
+        for yr in range(2025, 2029):
+            for r in _PREDICTIONS_INDEX.get((full_state_name, yr), []):
+                if r["fips"] == fips:
+                    cases[yr] = int(r["infected"])
+                    deaths[yr] = int(r["deaths"])
+                    break
+        name = county_names.get(fips, f"County {fips}")
+        results.append(CountyYearData(id=fips, name=name, cases=cases, deaths=deaths))
+    return results
 
 
 # pip install fastapi uvicorn pandas

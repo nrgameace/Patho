@@ -288,14 +288,13 @@ export function USMap({
                 return countyFips.startsWith(stateFips)
               })
 
-              return stateCounties.map((geo, index) => {
-                // Map to our mock county data
-                const countyIndex = index % (selectedStateData?.counties.length || 1)
-                const countyData = selectedStateData?.counties[countyIndex]
+              return stateCounties.map((geo) => {
+                const countyFips = String(geo.id).padStart(5, "0")
+                const countyData = selectedStateData?.counties.find(c => c.id === countyFips)
                 const cases = countyData?.cases[year] || 0
                 const fillColor = getColorForCases(cases, maxCountyCases)
-                const isSelected = selectedCounty === countyData?.id
-                
+                const isSelected = selectedCounty === countyFips
+
                 return (
                   <Geography
                     key={geo.rsmKey}
@@ -308,12 +307,11 @@ export function USMap({
                       hover: { outline: "none", fill: "#ff6060", cursor: "pointer" },
                       pressed: { outline: "none" },
                     }}
-                    onMouseEnter={() => setHoveredGeo(countyData?.id || null)}
+                    onMouseEnter={() => setHoveredGeo(countyFips)}
                     onMouseLeave={() => setHoveredGeo(null)}
                     onClick={() => {
-                      if (countyData) {
-                        handleCountyClick(countyData.id, countyData.name)
-                      }
+                      const name = countyData?.name || `County ${countyFips}`
+                      handleCountyClick(countyFips, name)
                     }}
                   />
                 )
@@ -327,7 +325,7 @@ export function USMap({
       {hoveredGeo && (
         <div className="absolute bottom-4 left-4 bg-card/95 backdrop-blur-sm border border-border rounded-lg px-4 py-2 pointer-events-none">
           <p className="text-sm font-medium text-foreground">
-            {selectedStateData?.counties.find(c => c.id === hoveredGeo)?.name || "County"}
+            {selectedStateData?.counties.find(c => c.id === hoveredGeo)?.name || `County ${hoveredGeo}`}
           </p>
           <p className="text-xs text-muted-foreground">
             Click to select

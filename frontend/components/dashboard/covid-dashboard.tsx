@@ -5,8 +5,11 @@ import { Header } from "./header"
 import { USMap } from "./us-map"
 import { MetricsSidebar } from "./metrics-sidebar"
 import { WelcomeOverlay } from "./welcome-overlay"
+import { useCovidData, loadCountiesForState } from "@/lib/covid-data"
+import { Activity } from "lucide-react"
 
 export function CovidDashboard() {
+  const { loading, error } = useCovidData()
   const [showWelcome, setShowWelcome] = useState(true)
   const [year, setYear] = useState(2024)
   const [selectedState, setSelectedState] = useState<string | null>(null)
@@ -22,10 +25,12 @@ export function CovidDashboard() {
     setYear(newYear)
   }, [])
 
-  const handleStateSelect = useCallback((stateId: string | null, stateName: string | null) => {
+  const handleStateSelect = useCallback(async (stateId: string | null, stateName: string | null) => {
+    if (stateId) {
+      await loadCountiesForState(stateId)
+    }
     setSelectedState(stateId)
     setSelectedStateName(stateName)
-    // Clear county selection when state changes
     setSelectedCounty(null)
     setSelectedCountyName(null)
   }, [])
@@ -34,6 +39,25 @@ export function CovidDashboard() {
     setSelectedCounty(countyId)
     setSelectedCountyName(countyName)
   }, [])
+
+  if (loading) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-background">
+        <div className="text-center space-y-4">
+          <Activity className="w-10 h-10 text-primary animate-pulse mx-auto" />
+          <p className="text-muted-foreground">Loading data...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-background">
+        <p className="text-destructive">Failed to load data: {error}</p>
+      </div>
+    )
+  }
 
   if (showWelcome) {
     return <WelcomeOverlay onStart={handleStartSimulation} />

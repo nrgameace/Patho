@@ -9,7 +9,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Patho | COVID-19 Data Dashboard',
   description: 'Interactive geospatial dashboard tracking COVID-19 data across the United States with predictive analytics',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
