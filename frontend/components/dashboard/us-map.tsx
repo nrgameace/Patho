@@ -131,7 +131,38 @@ export function USMap({
 }: USMapProps) {
   const [hoveredGeo, setHoveredGeo] = useState<string | null>(null)
   const [position, setPosition] = useState({ coordinates: [-96, 38] as [number, number], zoom: 1 })
+  const [isPlaying, setIsPlaying] = useState(false) // NEW: Audio state tracker
 
+  // NEW: Function to fetch and play audio
+  const playAudioSummary = async (locationName: string, casesCount: number, deathsCount: number) => {
+    if (isPlaying) return;
+    setIsPlaying(true);
+
+    try {
+      const response = await fetch('http://localhost:8000/api/generateAudio', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          location: locationName,
+          cases: casesCount,
+          deaths: deathsCount
+        }),
+      });
+
+      if (!response.ok) throw new Error("Audio generation failed");
+
+      const audioBlob = await response.blob();
+      const audioUrl = URL.createObjectURL(audioBlob);
+      const audio = new Audio(audioUrl);
+      
+      audio.onended = () => setIsPlaying(false);
+      await audio.play();
+
+    } catch (error) {
+      console.error("Error playing summary:", error);
+      setIsPlaying(false);
+    }
+  };
   const maxStateCases = useMemo(() => getMaxCases(year, 'state'), [year])
   
   const selectedStateData = useMemo(() => {
@@ -152,14 +183,20 @@ export function USMap({
       if (state) {
         onStateSelect(stateAbbr, state.name)
         onCountySelect(null, null)
-        // Center on the selected state with appropriate zoom
+        
+        // NEW: Trigger the audio for the State
+        const cases = state.cases[year] || 0;
+        // The mock data doesn't map state deaths at the root, so we sum them or pass a placeholder
+        const deaths = 0; 
+        playAudioSummary(state.name, cases, deaths);
+
         const stateConfig = STATE_CENTERS[stateAbbr]
         if (stateConfig) {
           setPosition({ coordinates: stateConfig.center, zoom: stateConfig.zoom })
         }
       }
     }
-  }, [onStateSelect, onCountySelect])
+  }, [onStateSelect, onCountySelect, year, isPlaying])
 
   const handleCountyClick = useCallback((countyId: string, countyName: string) => {
     onCountySelect(countyId, countyName)
@@ -291,7 +328,11 @@ export function USMap({
               return stateCounties.map((geo) => {
                 const countyFips = String(geo.id).padStart(5, "0")
                 const countyData = selectedStateData?.counties.find(c => c.id === countyFips)
+                
+                // Extract cases and deaths here so the onClick handler can access them safely
                 const cases = countyData?.cases[year] || 0
+                const deaths = countyData?.deaths[year] || 0
+                
                 const fillColor = getColorForCases(cases, maxCountyCases)
                 const isSelected = selectedCounty === countyFips
 
@@ -311,7 +352,12 @@ export function USMap({
                     onMouseLeave={() => setHoveredGeo(null)}
                     onClick={() => {
                       const name = countyData?.name || `County ${countyFips}`
+                      
+                      // Trigger visual selection
                       handleCountyClick(countyFips, name)
+                      
+                      // NEW: Trigger audio summary
+                      playAudioSummary(name, cases, deaths)
                     }}
                   />
                 )

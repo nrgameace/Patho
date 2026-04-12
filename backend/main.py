@@ -1,6 +1,8 @@
 import os
 from typing import Optional
-
+from fastapi.responses import StreamingResponse
+from elevenlabs.client import ElevenLabs
+import requests
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -119,6 +121,14 @@ class StateYearData(BaseModel):
     name: str
     cases: dict[int, int]
     deaths: dict[int, int]
+
+# Initialize ElevenLabs
+eleven_client = ElevenLabs(api_key=os.environ.get("ELEVENLABS_API_KEY"))
+
+class AudioRequest(BaseModel):
+    location: str
+    cases: int
+    deaths: int
 
 
 def _load_data() -> None:
@@ -384,6 +394,37 @@ def get_state_counties(body: StateCountiesRequest) -> list[CountyYearData]:
         results.append(CountyYearData(id=fips, name=name, cases=cases, deaths=deaths))
     return results
 
+@app.post("/api/generateAudio")
+def generate_audio(body: AudioRequest):
+    # 1. Call Featherless API (LLM)
+    featherless_url = "https://api.featherless.ai/v1/chat/completions"
+    headers = {"Authorization": f"Bearer {os.environ.get('FEATHERLESS_KEY')}"}
+    
+    prompt = f"Write a single, conversational sentence reporting the COVID-19 data for {body.location}. There are {body.cases} cases and {body.deaths} deaths. Vary your sentence structure completely so it doesn't sound repetitive."
+    
+    llm_response = requests.post(featherless_url, headers=headers, json={
+        "model": "meta-llama/Meta-Llama-3-8B-Instruct", 
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 40,
+        "temperature": 0.8 # Higher temp for varied phrasing
+    }).json()
+    
+    narration_script = llm_response['choices'][0]['message']['content']
+
+    # 2. Call ElevenLabs API
+    audio_generator = eleven_client.generate(
+        text=narration_script,
+        voice="Rachel",
+        model="eleven_multilingual_v2"
+    )
+
+    # 3. Stream directly to Vercel frontend
+    def iterfile():
+        for chunk in audio_generator:
+            if chunk:
+                yield chunk
+
+    return StreamingResponse(iterfile(), media_type="audio/mpeg")
 
 # pip install fastapi uvicorn pandas
 # uvicorn main:app --reload --port 8000
