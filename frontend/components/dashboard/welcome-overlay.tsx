@@ -39,7 +39,7 @@ export function WelcomeOverlay({ onStart }: WelcomeOverlayProps) {
             Welcome to the CDC Disease Simulation Dashboard. This interactive platform 
             provides real-time visualization of COVID-19 epidemiological data across 
             the United States, featuring historical analysis and predictive modeling 
-            through 2028.
+            through 2027.
           </p>
           <p className="text-sm text-muted-foreground/80">
             Explore state and county-level data, track transmission patterns, 

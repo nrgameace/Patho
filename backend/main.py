@@ -10,6 +10,7 @@ DATA_PATH         = os.path.join(os.path.dirname(__file__), "data", "covid_weekl
 HESITANCY_PATH    = os.path.join(os.path.dirname(__file__), "data", "vaccine_hesitancy.csv")
 SURVEILLANCE_PATH = os.path.join(os.path.dirname(__file__), "data", "case_surveillance.csv")
 PREDICTIONS_PATH  = os.path.join(os.path.dirname(__file__), "data", "predictions.csv")
+TRANSMISSION_PATH = os.path.join(os.path.dirname(__file__), "output", "cdc_county_monthly.csv")
 TITLE_FIX = {"District Of Columbia": "District of Columbia"}
 
 STATE_ABBREV = {
@@ -35,6 +36,7 @@ _HESITANCY_BY_STATE: dict[str, list[dict]] = {}
 _HESITANCY_BY_FIPS: dict[str, dict] = {}
 _SURVEILLANCE_BY_FIPS: dict[str, list[dict]] = {}
 _PREDICTIONS_INDEX: dict[tuple[str, int], list[dict]] = {}
+_TRANSMISSION_BY_STATE: dict[str, dict[str, list[dict]]] = {}
 
 
 class StateDataPoint(BaseModel):
@@ -120,7 +122,7 @@ class StateYearData(BaseModel):
 
 
 def _load_data() -> None:
-    global _STATE_INDEX, _YEARS, _HESITANCY_BY_STATE, _HESITANCY_BY_FIPS, _SURVEILLANCE_BY_FIPS, _PREDICTIONS_INDEX
+    global _STATE_INDEX, _YEARS, _HESITANCY_BY_STATE, _HESITANCY_BY_FIPS, _SURVEILLANCE_BY_FIPS, _PREDICTIONS_INDEX, _TRANSMISSION_BY_STATE
 
     df = pd.read_csv(DATA_PATH)
     df["week"] = pd.to_datetime(df["week"])
@@ -171,12 +173,26 @@ def _load_data() -> None:
     pdf["fips"]     = pdf["fips"].astype(str).str.strip().str.zfill(5)
     pdf["county"]   = pdf["county"].str.strip().str.title()
     pdf["state"]    = pdf["state"].str.strip().str.title().replace(TITLE_FIX)
-    pdf["year"]     = pd.to_numeric(pdf["year"], errors="coerce").fillna(0).astype(int)
+    pdf["year"]     = pd.to_numeric(pdf["year"], errors="coerce").fillna(0).astype(int) - 1
     pdf["infected"] = pd.to_numeric(pdf["infected"], errors="coerce").fillna(0).astype(int)
     pdf["deaths"]   = pd.to_numeric(pdf["deaths"], errors="coerce").fillna(0).astype(int)
 
     for (state, year), grp in pdf.groupby(["state", "year"]):
         _PREDICTIONS_INDEX[(state, year)] = grp.sort_values("county").to_dict("records")
+
+    if os.path.exists(TRANSMISSION_PATH):
+        tdf = pd.read_csv(TRANSMISSION_PATH)
+        tdf["fips_code"] = tdf["fips_code"].astype(str).str.strip().str.zfill(5)
+        tdf["date"] = pd.to_datetime(tdf["date"], errors="coerce")
+        tdf["year"] = tdf["date"].dt.year.astype(int)
+        tdf["cases_per_100K_7_day_count_change"] = pd.to_numeric(tdf["cases_per_100K_7_day_count_change"], errors="coerce").fillna(0)
+        tdf["state_name"] = tdf["state_name"].str.strip()
+        tdf["county_name"] = tdf["county_name"].str.strip()
+        for state_name, state_grp in tdf.groupby("state_name"):
+            by_fips: dict[str, list[dict]] = {}
+            for fips, fips_grp in state_grp.groupby("fips_code"):
+                by_fips[fips] = fips_grp[["fips_code", "county_name", "year", "cases_per_100K_7_day_count_change"]].to_dict("records")
+            _TRANSMISSION_BY_STATE[state_name] = by_fips
 
 
 def _hesitancy_record_to_point(r: dict) -> VaccineHesitancyPoint:
@@ -275,8 +291,8 @@ def get_case_surveillance(body: CaseSurveillanceRequest) -> list[CaseSurveillanc
 
 @app.post("/api/getPredictions", response_model=list[CountyPrediction])
 def get_predictions(body: PredictionRequest) -> list[CountyPrediction]:
-    if body.year < 2025 or body.year > 2028:
-        raise HTTPException(status_code=400, detail="Predictions only available for years 2025-2028")
+    if body.year < 2024 or body.year > 2027:
+        raise HTTPException(status_code=400, detail="Predictions only available for years 2024-2027")
     state = body.state.strip().title()
     rows = _PREDICTIONS_INDEX.get((state, body.year), [])
     return [
@@ -294,7 +310,7 @@ def get_predictions(body: PredictionRequest) -> list[CountyPrediction]:
 
 @app.get("/api/getAllStateData", response_model=list[StateYearData])
 def get_all_state_data() -> list[StateYearData]:
-    all_years = list(range(2020, 2029))
+    all_years = list(range(2020, 2028))
     results = []
     for state_name, rows in _STATE_INDEX.items():
         abbrev = STATE_ABBREV.get(state_name)
@@ -303,7 +319,7 @@ def get_all_state_data() -> list[StateYearData]:
         cases: dict[int, int] = {}
         deaths: dict[int, int] = {}
         for yr in all_years:
-            if yr <= 2024:
+            if yr <= 2023:
                 point = _query_state(state_name, rows, yr, 6)
                 cases[yr] = point.infected
                 deaths[yr] = point.deaths
@@ -319,34 +335,51 @@ def get_all_state_data() -> list[StateYearData]:
 def get_state_counties(body: StateCountiesRequest) -> list[CountyYearData]:
     state_code = body.stateCode.strip().upper()
     full_state_name = ABBREV_TO_STATE.get(state_code, "")
-    hesitancy_rows = _HESITANCY_BY_STATE.get(state_code, [])
-    fips_set = {r["fips_code"] for r in hesitancy_rows}
+
+    fips_set: set[str] = set()
     county_names: dict[str, str] = {}
-    for r in hesitancy_rows:
+
+    for r in _HESITANCY_BY_STATE.get(state_code, []):
+        fips_set.add(r["fips_code"])
         raw_name = r["county_name"]
-        name = raw_name.rsplit(",", 1)[0].strip() if "," in raw_name else raw_name
-        county_names[r["fips_code"]] = name
-    for yr in range(2025, 2029):
+        county_names[r["fips_code"]] = raw_name.rsplit(",", 1)[0].strip() if "," in raw_name else raw_name
+
+    transmission_fips = _TRANSMISSION_BY_STATE.get(full_state_name, {})
+    for fips, rows in transmission_fips.items():
+        fips_set.add(fips)
+        if fips not in county_names and rows:
+            county_names[fips] = rows[0]["county_name"]
+
+    for yr in range(2024, 2028):
         for r in _PREDICTIONS_INDEX.get((full_state_name, yr), []):
-            fips = r["fips"]
-            fips_set.add(fips)
-            if fips not in county_names:
-                county_names[fips] = r["county"]
+            fips_set.add(r["fips"])
+            if r["fips"] not in county_names:
+                county_names[r["fips"]] = r["county"]
+
     results = []
     for fips in sorted(fips_set):
         cases: dict[int, int] = {}
         deaths: dict[int, int] = {}
+
+        trans_rows = transmission_fips.get(fips, [])
+        for r in trans_rows:
+            yr = int(r["year"])
+            cases[yr] = cases.get(yr, 0) + int(round(r["cases_per_100K_7_day_count_change"]))
+
         surv_rows = _SURVEILLANCE_BY_FIPS.get(fips, [])
         for r in surv_rows:
             yr = int(r["case_month"][:4])
-            cases[yr] = cases.get(yr, 0) + int(r["total_cases"])
             deaths[yr] = deaths.get(yr, 0) + int(r["deaths"])
-        for yr in range(2025, 2029):
+            if yr not in cases:
+                cases[yr] = cases.get(yr, 0) + int(r["total_cases"])
+
+        for yr in range(2024, 2028):
             for r in _PREDICTIONS_INDEX.get((full_state_name, yr), []):
                 if r["fips"] == fips:
                     cases[yr] = int(r["infected"])
                     deaths[yr] = int(r["deaths"])
                     break
+
         name = county_names.get(fips, f"County {fips}")
         results.append(CountyYearData(id=fips, name=name, cases=cases, deaths=deaths))
     return results

@@ -1,5 +1,7 @@
 import io
+import json
 import os
+import time
 
 import pandas as pd
 import requests
@@ -265,6 +267,103 @@ def clean_flight_data() -> float:
     return size_mb
 
 
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
+COMMUNITY_TRANSMISSION_URL = "https://data.cdc.gov/api/views/nra9-vzzn/rows.csv?accessType=DOWNLOAD"
+COMMUNITY_TRANSMISSION_COLS = [
+    "state_name", "county_name", "fips_code", "date",
+    "cases_per_100K_7_day_count_change",
+    "percent_test_results_reported_positive_last_7_days",
+    "community_transmission_level",
+]
+
+
+def _stream_csv_chunked(url: str, chunksize: int = 50_000, max_retries: int = 3) -> pd.io.parsers.readers.TextFileReader:
+    for attempt in range(1, max_retries + 1):
+        try:
+            print(f"  Downloading (attempt {attempt}/{max_retries})...")
+            resp = requests.get(url, timeout=300)
+            resp.raise_for_status()
+            text = resp.text
+            print(f"  Downloaded {len(text) / (1024*1024):.1f} MB of CSV text")
+            return pd.read_csv(io.StringIO(text), chunksize=chunksize, low_memory=False)
+        except (requests.RequestException, Exception) as e:
+            print(f"  Attempt {attempt} failed: {e}")
+            if attempt == max_retries:
+                raise
+            time.sleep(5)
+
+
+def fetch_community_transmission() -> tuple[pd.DataFrame, float, float]:
+    print("Fetching CDC County Community Transmission (streaming)...")
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    reader = _stream_csv_chunked(COMMUNITY_TRANSMISSION_URL)
+    filtered_chunks = []
+    total_raw = 0
+
+    for i, chunk in enumerate(reader):
+        total_raw += len(chunk)
+        if i % 10 == 0:
+            print(f"  Processing chunk {i}, raw rows so far: {total_raw:,}")
+
+        chunk.columns = chunk.columns.str.strip()
+        available = [c for c in COMMUNITY_TRANSMISSION_COLS if c in chunk.columns]
+        chunk = chunk[available].copy()
+
+        chunk["date"] = pd.to_datetime(chunk["date"], format="mixed", errors="coerce")
+        chunk = chunk.dropna(subset=["date", "fips_code"])
+
+        chunk["fips_code"] = pd.to_numeric(chunk["fips_code"], errors="coerce").fillna(0).astype(int).astype(str).str.zfill(5)
+        chunk = chunk[chunk["fips_code"] != "00000"]
+
+        for col in ["cases_per_100K_7_day_count_change", "percent_test_results_reported_positive_last_7_days"]:
+            if col in chunk.columns:
+                chunk[col] = chunk[col].replace("suppressed", pd.NA)
+                chunk[col] = pd.to_numeric(chunk[col], errors="coerce")
+
+        chunk["_year"] = chunk["date"].dt.year
+        chunk["_month"] = chunk["date"].dt.month
+        chunk = chunk.sort_values("date")
+        chunk = chunk.groupby(["fips_code", "_year", "_month"], as_index=False).first()
+
+        filtered_chunks.append(chunk)
+
+    print(f"  Total raw rows streamed: {total_raw:,}")
+    df = pd.concat(filtered_chunks, ignore_index=True)
+
+    df = df.sort_values("date")
+    df = df.groupby(["fips_code", "_year", "_month"], as_index=False).first()
+    df = df.drop(columns=["_year", "_month"])
+    df = df.sort_values(["fips_code", "date"]).reset_index(drop=True)
+
+    csv_path = os.path.join(OUTPUT_DIR, "cdc_county_monthly.csv")
+    df.to_csv(csv_path, index=False)
+    csv_mb = os.path.getsize(csv_path) / (1024 * 1024)
+
+    json_path = os.path.join(OUTPUT_DIR, "cdc_county_monthly.json")
+    json_df = df.copy()
+    json_df["date"] = json_df["date"].dt.strftime("%Y-%m-%d")
+    json_df.to_json(json_path, orient="records", indent=2)
+    json_mb = os.path.getsize(json_path) / (1024 * 1024)
+
+    date_min = df["date"].min().strftime("%Y-%m-%d")
+    date_max = df["date"].max().strftime("%Y-%m-%d")
+    fips_count = df["fips_code"].nunique()
+    year_counts = df.groupby(df["date"].dt.year).size()
+
+    print(f"\n--- Community Transmission Summary ---")
+    print(f"  Output rows:    {len(df):,}")
+    print(f"  Unique FIPS:    {fips_count:,}")
+    print(f"  Date range:     {date_min} to {date_max}")
+    print(f"  CSV size:       {csv_mb:.2f} MB")
+    print(f"  JSON size:      {json_mb:.2f} MB")
+    print(f"  Rows per year:")
+    for yr, count in year_counts.items():
+        print(f"    {yr}: {count:,}")
+
+    return df, csv_mb, json_mb
+
+
 def print_summary(sizes: list) -> None:
     total = sum(sizes)
     print(f"\nTotal combined size: {total:.2f} MB")
@@ -303,7 +402,9 @@ def main() -> None:
 
     size_fl = clean_flight_data()
 
-    print_summary([size1, size2, size3, size_vh, size_cs, size_fl])
+    _, size_ct_csv, _ = fetch_community_transmission()
+
+    print_summary([size1, size2, size3, size_vh, size_cs, size_fl, size_ct_csv])
 
 
 if __name__ == "__main__":

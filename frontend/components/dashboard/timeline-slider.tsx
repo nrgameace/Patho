@@ -9,7 +9,7 @@ interface TimelineSliderProps {
   onYearChange: (year: number) => void
 }
 
-const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028]
+const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027]
 const CURRENT_YEAR = 2024
 
 export function TimelineSlider({ year, onYearChange }: TimelineSliderProps) {
