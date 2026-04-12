@@ -231,8 +231,8 @@ app = FastAPI(title="Patho Disease Tracker API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=["https://patho-k9ky7yllp-nickaregas-1940s-projects.vercel.app",  # preview
+    "https://patho.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
