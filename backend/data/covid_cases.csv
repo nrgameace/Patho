@@ -1,266 +1,1131 @@
 state,month,age_group,total_cases,deaths,hospitalized
-Arizona,2020-06-01,18 to 49 years,282,0,4
-Arizona,2020-06-01,50 to 64 years,34,0,2
-Arizona,2020-11-01,18 to 49 years,999,0,97
-Arizona,2021-11-01,18 to 49 years,348,0,0
-Arizona,2022-02-01,65+ years,140,0,12
-Arizona,2023-09-01,18 to 49 years,43,0,0
-Arizona,2023-10-01,65+ years,59,0,7
-Arizona,2024-01-01,65+ years,72,0,7
-Arizona,2024-02-01,65+ years,22,0,4
-California,2020-05-01,18 to 49 years,14,0,1
-California,2020-05-01,50 to 64 years,565,0,49
-California,2020-07-01,0 - 17 years,21,0,0
-California,2020-07-01,18 to 49 years,1464,0,27
-California,2020-07-01,50 to 64 years,16,0,1
-California,2020-08-01,18 to 49 years,660,0,26
-California,2020-09-01,0 - 17 years,12,0,0
-California,2020-09-01,65+ years,151,0,30
-California,2020-11-01,18 to 49 years,55,0,0
-California,2020-12-01,65+ years,74,10,12
-California,2021-01-01,0 - 17 years,94,0,2
-California,2021-01-01,50 to 64 years,1,0,0
-California,2021-02-01,50 to 64 years,34,0,4
-California,2021-03-01,50 to 64 years,33,0,1
-California,2021-04-01,18 to 49 years,13,0,1
-California,2021-05-01,18 to 49 years,42,0,3
-California,2021-07-01,18 to 49 years,749,0,25
-California,2021-11-01,50 to 64 years,81,0,1
-California,2021-12-01,18 to 49 years,88,0,0
-California,2022-01-01,0 - 17 years,175,0,1
-California,2022-01-01,18 to 49 years,1966,0,1
-California,2022-01-01,50 to 64 years,25,0,0
-California,2022-01-01,65+ years,184,0,10
-California,2022-01-01,Missing,17,0,0
-California,2022-02-01,0 - 17 years,13,0,1
-California,2022-02-01,18 to 49 years,470,0,16
-California,2022-05-01,18 to 49 years,248,0,0
-California,2022-06-01,0 - 17 years,798,0,4
-California,2022-06-01,18 to 49 years,62,0,1
-California,2022-07-01,18 to 49 years,1249,0,0
-California,2022-07-01,50 to 64 years,21,0,0
-California,2022-08-01,18 to 49 years,296,0,1
-California,2022-08-01,50 to 64 years,273,0,7
-California,2022-08-01,65+ years,18,0,1
-California,2022-10-01,0 - 17 years,99,0,0
-California,2022-10-01,50 to 64 years,32,0,0
-California,2022-11-01,0 - 17 years,137,0,0
-California,2022-12-01,0 - 17 years,330,0,2
-California,2022-12-01,18 to 49 years,489,0,1
-California,2022-12-01,50 to 64 years,248,0,0
-California,2023-01-01,65+ years,70,0,0
-California,2023-03-01,0 - 17 years,12,0,0
-California,2023-05-01,18 to 49 years,114,0,0
-California,2023-05-01,65+ years,20,0,0
-California,2023-06-01,0 - 17 years,16,0,0
-California,2023-08-01,50 to 64 years,120,0,0
-California,2023-10-01,65+ years,330,0,48
-Florida,2021-07-01,65+ years,555,41,86
-Florida,2021-08-01,18 to 49 years,1401,0,25
-Florida,2021-11-01,18 to 49 years,159,0,2
-Florida,2022-01-01,18 to 49 years,1841,0,0
-Florida,2023-11-01,50 to 64 years,43,0,0
-Illinois,2020-03-01,18 to 49 years,305,0,66
-Illinois,2020-07-01,18 to 49 years,153,0,6
-Illinois,2020-10-01,50 to 64 years,2,0,0
-Illinois,2020-11-01,65+ years,422,63,30
-Illinois,2020-12-01,0 - 17 years,417,0,6
-Illinois,2021-03-01,18 to 49 years,61,0,2
-Illinois,2021-08-01,0 - 17 years,1,0,0
-Illinois,2021-12-01,65+ years,56,0,4
-Illinois,2022-05-01,0 - 17 years,130,0,0
-Illinois,2022-08-01,50 to 64 years,345,0,10
-Illinois,2022-09-01,0 - 17 years,168,0,3
-Illinois,2022-09-01,18 to 49 years,131,0,2
-Illinois,2022-09-01,65+ years,275,0,22
-Illinois,2022-10-01,18 to 49 years,87,0,1
-Illinois,2023-02-01,18 to 49 years,120,0,1
-Illinois,2023-02-01,50 to 64 years,145,0,5
-Illinois,2023-02-01,65+ years,86,0,18
-Illinois,2023-04-01,0 - 17 years,18,0,1
-Illinois,2024-01-01,65+ years,80,0,14
-Massachusetts,2020-09-01,65+ years,46,0,11
-Massachusetts,2020-10-01,65+ years,179,20,22
-Massachusetts,2021-05-01,65+ years,48,0,14
-Massachusetts,2022-03-01,65+ years,211,11,16
-Massachusetts,2022-05-01,50 to 64 years,530,0,1
-Massachusetts,2022-10-01,18 to 49 years,353,0,2
-Massachusetts,2022-12-01,50 to 64 years,1,0,0
-Massachusetts,2023-01-01,65+ years,302,22,23
-Massachusetts,2023-04-01,0 - 17 years,41,0,0
-Massachusetts,2024-01-01,50 to 64 years,204,0,1
-Massachusetts,2024-02-01,18 to 49 years,85,0,0
-Michigan,2020-06-01,18 to 49 years,53,0,0
-Michigan,2020-06-01,65+ years,38,0,11
-Michigan,2020-10-01,18 to 49 years,13,0,1
-Michigan,2021-06-01,50 to 64 years,34,0,1
-Michigan,2021-11-01,18 to 49 years,964,0,0
-Michigan,2022-03-01,50 to 64 years,31,0,0
-Michigan,2022-07-01,0 - 17 years,16,0,0
-Michigan,2022-07-01,50 to 64 years,542,0,1
-Michigan,2023-02-01,0 - 17 years,16,0,0
-Michigan,2023-02-01,Missing,109,0,0
-Michigan,2023-03-01,18 to 49 years,46,0,0
-Michigan,2023-10-01,0 - 17 years,11,0,0
-Michigan,2023-10-01,50 to 64 years,127,0,1
-Nevada,2020-06-01,50 to 64 years,21,0,5
-Nevada,2020-09-01,50 to 64 years,53,0,4
-Nevada,2020-11-01,Missing,18,0,0
-Nevada,2020-12-01,Missing,17,0,0
-Nevada,2021-03-01,0 - 17 years,35,0,1
-Nevada,2021-06-01,50 to 64 years,29,0,3
-Nevada,2021-10-01,18 to 49 years,364,0,16
-Nevada,2021-11-01,18 to 49 years,213,0,4
-Nevada,2021-12-01,18 to 49 years,386,0,8
-Nevada,2022-02-01,65+ years,19,0,1
-Nevada,2022-05-01,50 to 64 years,11,0,0
-Nevada,2022-07-01,0 - 17 years,195,0,2
-Nevada,2022-08-01,Missing,17,0,2
-Nevada,2022-09-01,18 to 49 years,80,0,0
-Nevada,2022-11-01,50 to 64 years,20,0,0
-Nevada,2022-12-01,0 - 17 years,40,0,0
-Nevada,2022-12-01,65+ years,65,0,9
-Nevada,2023-03-01,18 to 49 years,119,0,1
-Nevada,2023-05-01,18 to 49 years,81,0,0
-Nevada,2023-05-01,50 to 64 years,15,0,0
-Nevada,2023-06-01,65+ years,24,0,1
-Nevada,2023-07-01,18 to 49 years,58,0,2
-Nevada,2023-07-01,50 to 64 years,60,0,1
-Nevada,2023-10-01,65+ years,17,0,0
-Nevada,2023-12-01,0 - 17 years,29,0,1
-Nevada,2024-02-01,50 to 64 years,14,0,1
-New York,2020-04-01,50 to 64 years,481,49,272
-New York,2020-05-01,0 - 17 years,35,0,9
-New York,2020-05-01,18 to 49 years,1958,0,3
-New York,2020-05-01,50 to 64 years,37,0,1
-New York,2020-06-01,18 to 49 years,113,0,18
-New York,2020-09-01,18 to 49 years,42,0,2
-New York,2020-11-01,18 to 49 years,244,0,4
-New York,2021-01-01,0 - 17 years,270,0,1
-New York,2021-02-01,18 to 49 years,485,0,10
-New York,2021-02-01,65+ years,248,18,91
-New York,2021-04-01,18 to 49 years,544,0,33
-New York,2021-04-01,65+ years,154,13,65
-New York,2021-05-01,18 to 49 years,21,0,2
-New York,2021-05-01,50 to 64 years,34,0,8
-New York,2021-06-01,0 - 17 years,17,0,0
-New York,2021-08-01,18 to 49 years,37,0,3
-New York,2021-08-01,65+ years,53,0,17
-New York,2021-09-01,18 to 49 years,66,0,6
-New York,2021-11-01,18 to 49 years,70,0,1
-New York,2021-11-01,65+ years,23,0,11
-New York,2021-12-01,18 to 49 years,801,0,3
-New York,2021-12-01,65+ years,16,0,0
-New York,2022-01-01,0 - 17 years,1243,0,13
-New York,2022-01-01,18 to 49 years,642,0,0
-New York,2022-02-01,65+ years,12,0,2
-New York,2022-03-01,18 to 49 years,383,0,0
-New York,2022-04-01,18 to 49 years,1255,0,12
-New York,2022-04-01,50 to 64 years,70,0,1
-New York,2022-05-01,0 - 17 years,20,0,0
-New York,2022-05-01,50 to 64 years,242,0,0
-New York,2022-06-01,0 - 17 years,93,0,2
-New York,2022-06-01,18 to 49 years,19,0,1
-New York,2022-08-01,18 to 49 years,300,0,20
-New York,2022-11-01,0 - 17 years,30,0,2
-New York,2022-12-01,50 to 64 years,324,0,0
-New York,2023-01-01,18 to 49 years,22,0,0
-New York,2023-02-01,65+ years,154,0,46
-New York,2023-04-01,18 to 49 years,130,0,10
-New York,2023-06-01,65+ years,14,0,7
-New York,2023-08-01,18 to 49 years,89,0,0
-New York,2023-09-01,18 to 49 years,73,0,5
-New York,2023-09-01,65+ years,28,0,3
-New York,2023-11-01,18 to 49 years,53,0,1
-New York,2023-11-01,65+ years,16,0,4
-New York,2023-12-01,18 to 49 years,197,0,7
-New York,2023-12-01,65+ years,125,0,27
-New York,2024-01-01,0 - 17 years,225,0,9
-New York,2024-01-01,18 to 49 years,477,0,11
-New York,2024-05-01,65+ years,14,0,6
-Texas,2020-03-01,18 to 49 years,16,0,0
-Texas,2020-04-01,18 to 49 years,127,0,10
-Texas,2020-06-01,0 - 17 years,15,0,1
-Texas,2020-06-01,18 to 49 years,17,0,2
-Texas,2020-06-01,50 to 64 years,20,0,0
-Texas,2020-06-01,65+ years,15,0,3
-Texas,2020-07-01,18 to 49 years,17,0,2
-Texas,2020-08-01,0 - 17 years,52,0,1
-Texas,2020-08-01,18 to 49 years,194,0,5
-Texas,2020-09-01,0 - 17 years,79,0,0
-Texas,2020-09-01,18 to 49 years,15,0,0
-Texas,2020-09-01,50 to 64 years,165,0,4
-Texas,2020-10-01,18 to 49 years,303,0,9
-Texas,2020-11-01,50 to 64 years,42,0,0
-Texas,2020-11-01,65+ years,31,0,2
-Texas,2020-12-01,0 - 17 years,12,0,0
-Texas,2020-12-01,18 to 49 years,169,0,2
-Texas,2020-12-01,65+ years,249,29,59
-Texas,2021-01-01,18 to 49 years,1835,0,8
-Texas,2021-01-01,65+ years,649,55,78
-Texas,2021-02-01,18 to 49 years,249,0,0
-Texas,2021-02-01,50 to 64 years,37,0,0
-Texas,2021-03-01,18 to 49 years,339,0,2
-Texas,2021-03-01,65+ years,92,0,22
-Texas,2021-03-01,NA,11,0,0
-Texas,2021-04-01,0 - 17 years,22,0,0
-Texas,2021-04-01,18 to 49 years,12,0,0
-Texas,2021-05-01,0 - 17 years,16,0,0
-Texas,2021-06-01,50 to 64 years,18,0,2
-Texas,2021-07-01,0 - 17 years,15,0,0
-Texas,2021-07-01,18 to 49 years,20,0,0
-Texas,2021-07-01,50 to 64 years,208,0,17
-Texas,2021-07-01,65+ years,147,0,14
-Texas,2021-08-01,0 - 17 years,108,0,0
-Texas,2021-08-01,65+ years,337,16,39
-Texas,2021-09-01,0 - 17 years,18,0,0
-Texas,2021-09-01,50 to 64 years,95,0,1
-Texas,2021-09-01,65+ years,21,0,1
-Texas,2021-10-01,50 to 64 years,12,0,1
-Texas,2021-11-01,50 to 64 years,16,0,0
-Texas,2021-11-01,65+ years,17,0,0
-Texas,2021-12-01,18 to 49 years,168,0,1
-Texas,2022-01-01,0 - 17 years,623,0,1
-Texas,2022-01-01,18 to 49 years,53,0,1
-Texas,2022-01-01,50 to 64 years,177,0,0
-Texas,2022-02-01,18 to 49 years,86,0,0
-Texas,2022-03-01,0 - 17 years,570,0,4
-Texas,2022-05-01,0 - 17 years,227,0,0
-Texas,2022-06-01,18 to 49 years,14,0,0
-Texas,2022-06-01,50 to 64 years,36,0,0
-Texas,2022-06-01,65+ years,84,0,5
-Texas,2022-07-01,18 to 49 years,3,0,0
-Texas,2022-07-01,50 to 64 years,55,0,0
-Texas,2022-08-01,0 - 17 years,86,0,0
-Texas,2022-08-01,18 to 49 years,54,0,0
-Texas,2022-09-01,0 - 17 years,11,0,0
-Texas,2022-09-01,18 to 49 years,12,0,0
-Texas,2022-09-01,65+ years,14,0,0
-Texas,2022-10-01,18 to 49 years,36,0,0
-Texas,2022-11-01,18 to 49 years,60,0,0
-Texas,2022-11-01,65+ years,147,0,7
-Texas,2023-01-01,0 - 17 years,47,0,0
-Texas,2023-01-01,65+ years,14,0,0
-Texas,2023-03-01,18 to 49 years,135,0,1
-Texas,2023-03-01,50 to 64 years,15,0,0
-Texas,2023-04-01,0 - 17 years,16,0,0
-Texas,2023-05-01,50 to 64 years,18,0,0
-Texas,2023-06-01,18 to 49 years,14,0,0
-Texas,2023-06-01,50 to 64 years,29,0,0
-Texas,2023-06-01,65+ years,11,0,0
-Texas,2023-07-01,50 to 64 years,12,0,0
-Texas,2023-08-01,0 - 17 years,53,0,0
-Texas,2023-08-01,50 to 64 years,31,0,0
-Texas,2023-08-01,65+ years,46,0,2
-Texas,2023-09-01,0 - 17 years,49,0,0
-Texas,2023-09-01,50 to 64 years,20,0,0
-Texas,2023-10-01,0 - 17 years,19,0,0
-Texas,2023-10-01,65+ years,45,0,3
-Texas,2024-01-01,0 - 17 years,33,0,0
-Texas,2024-03-01,65+ years,10,0,0
-Texas,2024-04-01,18 to 49 years,17,0,0
-Texas,2024-05-01,18 to 49 years,20,0,0
-Washington,2021-08-01,18 to 49 years,1303,0,28
-Washington,2022-02-01,0 - 17 years,354,0,3
-Washington,2022-10-01,0 - 17 years,240,0,6
-Washington,2023-04-01,0 - 17 years,103,0,3
+Alabama,2020-03-01,50 to 64 years,6,0,3
+Alabama,2020-06-01,0 - 17 years,25,0,0
+Alabama,2020-08-01,18 to 49 years,11,0,0
+Alabama,2020-09-01,18 to 49 years,67,0,1
+Alabama,2020-09-01,65+ years,7,0,2
+Alabama,2020-11-01,18 to 49 years,13,0,0
+Alabama,2020-11-01,50 to 64 years,14,0,0
+Alabama,2020-12-01,0 - 17 years,10,0,0
+Alabama,2020-12-01,Missing,92,0,1
+Alabama,2021-01-01,18 to 49 years,48,0,1
+Alabama,2021-01-01,65+ years,81,14,10
+Alabama,2021-02-01,0 - 17 years,11,0,0
+Alabama,2021-02-01,50 to 64 years,13,0,1
+Alabama,2021-03-01,Missing,14,0,1
+Alabama,2021-04-01,65+ years,2,0,0
+Alabama,2021-07-01,18 to 49 years,8,0,0
+Alabama,2021-07-01,65+ years,8,0,1
+Alabama,2021-08-01,18 to 49 years,42,0,1
+Alabama,2021-09-01,50 to 64 years,16,0,0
+Alabama,2021-09-01,Missing,62,0,0
+Alabama,2021-10-01,Missing,22,0,0
+Alabama,2021-12-01,Missing,37,0,1
+Alabama,2022-01-01,0 - 17 years,49,0,0
+Alabama,2022-01-01,18 to 49 years,19,0,0
+Alabama,2022-01-01,50 to 64 years,75,0,0
+Alabama,2022-01-01,Missing,92,0,0
+Alabama,2022-02-01,Missing,24,0,0
+Alabama,2022-10-01,18 to 49 years,15,0,0
+Alabama,2022-11-01,Missing,86,0,0
+Alabama,2022-11-01,NA,15,0,0
+Alabama,2023-01-01,65+ years,14,0,0
+Alabama,2023-08-01,Missing,142,0,1
+Alabama,2024-03-01,Missing,42,0,0
+Alabama,2024-04-01,Missing,27,0,0
+Alaska,2021-03-01,65+ years,17,0,0
+Alaska,2022-09-01,0 - 17 years,34,0,0
+Alaska,2022-09-01,18 to 49 years,26,0,1
+Alaska,2023-11-01,0 - 17 years,15,0,0
+Arizona,2020-06-01,0 - 17 years,37,0,0
+Arizona,2020-06-01,65+ years,1,1,0
+Arizona,2020-07-01,50 to 64 years,24,0,8
+Arizona,2020-12-01,0 - 17 years,12,0,0
+Arizona,2020-12-01,18 to 49 years,22,0,3
+Arizona,2020-12-01,50 to 64 years,92,4,9
+Arizona,2021-01-01,50 to 64 years,70,0,10
+Arizona,2021-03-01,0 - 17 years,11,0,0
+Arizona,2021-03-01,18 to 49 years,53,0,2
+Arizona,2021-08-01,50 to 64 years,92,0,14
+Arizona,2021-10-01,18 to 49 years,35,0,2
+Arizona,2021-12-01,50 to 64 years,39,0,8
+Arizona,2022-05-01,65+ years,86,0,9
+Arizona,2022-06-01,18 to 49 years,91,0,2
+Arizona,2022-07-01,18 to 49 years,36,0,1
+Arizona,2022-08-01,50 to 64 years,22,0,0
+Arizona,2022-09-01,50 to 64 years,12,0,0
+Arizona,2022-11-01,0 - 17 years,17,0,0
+Arizona,2022-12-01,65+ years,3,0,1
+Arizona,2023-02-01,0 - 17 years,11,0,0
+Arizona,2023-04-01,50 to 64 years,13,0,2
+Arizona,2023-07-01,50 to 64 years,27,0,1
+Arizona,2023-08-01,18 to 49 years,15,0,0
+Arizona,2023-10-01,0 - 17 years,51,0,0
+Arizona,2023-12-01,50 to 64 years,46,0,3
+Arkansas,2020-08-01,0 - 17 years,15,0,0
+Arkansas,2020-11-01,18 to 49 years,92,0,3
+Arkansas,2020-12-01,0 - 17 years,31,0,1
+Arkansas,2021-01-01,65+ years,29,0,3
+Arkansas,2021-02-01,50 to 64 years,23,0,0
+Arkansas,2021-05-01,18 to 49 years,20,0,2
+Arkansas,2021-06-01,0 - 17 years,8,0,0
+Arkansas,2021-07-01,18 to 49 years,70,0,2
+Arkansas,2021-09-01,18 to 49 years,40,0,2
+Arkansas,2021-09-01,65+ years,15,0,3
+Arkansas,2021-12-01,50 to 64 years,45,0,2
+Arkansas,2022-01-01,0 - 17 years,26,0,0
+Arkansas,2022-01-01,18 to 49 years,13,0,0
+Arkansas,2022-01-01,65+ years,2,0,0
+Arkansas,2022-01-01,Missing,14,0,0
+Arkansas,2022-02-01,0 - 17 years,15,0,0
+Arkansas,2022-02-01,18 to 49 years,89,0,0
+Arkansas,2022-04-01,50 to 64 years,12,0,0
+Arkansas,2022-08-01,0 - 17 years,7,0,0
+Arkansas,2022-12-01,0 - 17 years,13,0,0
+Arkansas,2022-12-01,65+ years,11,0,0
+Arkansas,2023-03-01,0 - 17 years,14,0,0
+Arkansas,2023-05-01,65+ years,13,0,0
+Arkansas,2024-02-01,50 to 64 years,11,0,0
+Arkansas,2024-03-01,50 to 64 years,13,0,0
+California,2020-03-01,65+ years,6,0,3
+California,2020-07-01,0 - 17 years,13,0,0
+California,2020-07-01,50 to 64 years,8,0,0
+California,2020-08-01,18 to 49 years,19,0,0
+California,2020-08-01,50 to 64 years,13,0,4
+California,2020-09-01,18 to 49 years,76,0,2
+California,2020-10-01,0 - 17 years,12,0,0
+California,2020-11-01,18 to 49 years,21,0,0
+California,2020-11-01,65+ years,11,0,3
+California,2020-12-01,18 to 49 years,158,0,0
+California,2020-12-01,50 to 64 years,28,0,0
+California,2021-01-01,18 to 49 years,149,0,3
+California,2021-01-01,50 to 64 years,63,0,0
+California,2021-02-01,18 to 49 years,8,0,0
+California,2021-06-01,50 to 64 years,43,0,7
+California,2021-07-01,18 to 49 years,14,0,0
+California,2021-08-01,18 to 49 years,108,0,1
+California,2021-08-01,65+ years,8,0,0
+California,2021-09-01,18 to 49 years,9,0,0
+California,2021-10-01,0 - 17 years,32,0,0
+California,2021-10-01,50 to 64 years,11,0,1
+California,2021-11-01,0 - 17 years,12,0,0
+California,2021-11-01,18 to 49 years,22,0,0
+California,2021-11-01,50 to 64 years,45,0,0
+California,2021-11-01,NA,15,0,1
+California,2021-12-01,18 to 49 years,138,0,1
+California,2021-12-01,50 to 64 years,80,0,2
+California,2021-12-01,65+ years,52,0,9
+California,2022-01-01,0 - 17 years,89,0,1
+California,2022-01-01,18 to 49 years,346,0,0
+California,2022-01-01,50 to 64 years,18,0,0
+California,2022-01-01,65+ years,16,0,2
+California,2022-02-01,18 to 49 years,34,0,0
+California,2022-04-01,50 to 64 years,23,0,0
+California,2022-05-01,50 to 64 years,19,0,0
+California,2022-06-01,18 to 49 years,91,0,0
+California,2022-06-01,65+ years,18,0,1
+California,2022-07-01,0 - 17 years,2,0,0
+California,2022-07-01,18 to 49 years,275,0,2
+California,2022-07-01,50 to 64 years,92,0,0
+California,2022-07-01,65+ years,80,0,1
+California,2022-08-01,0 - 17 years,152,0,2
+California,2022-09-01,18 to 49 years,92,0,0
+California,2022-10-01,0 - 17 years,11,0,0
+California,2022-10-01,18 to 49 years,26,0,0
+California,2022-10-01,50 to 64 years,15,0,0
+California,2022-10-01,65+ years,131,0,0
+California,2022-11-01,18 to 49 years,92,0,0
+California,2022-11-01,65+ years,68,0,11
+California,2022-11-01,NA,18,0,1
+California,2023-01-01,18 to 49 years,11,0,0
+California,2023-01-01,65+ years,7,0,0
+California,2023-03-01,0 - 17 years,11,0,0
+California,2023-03-01,50 to 64 years,13,0,0
+California,2023-03-01,65+ years,22,0,0
+California,2023-06-01,65+ years,12,0,0
+California,2023-08-01,50 to 64 years,20,0,0
+California,2023-10-01,0 - 17 years,16,0,0
+California,2023-11-01,50 to 64 years,16,0,2
+California,2023-12-01,18 to 49 years,30,0,1
+California,2023-12-01,50 to 64 years,11,0,0
+California,2023-12-01,65+ years,13,0,0
+California,2024-01-01,50 to 64 years,34,0,1
+California,2024-01-01,65+ years,27,0,0
+Colorado,2020-09-01,18 to 49 years,92,0,2
+Colorado,2020-11-01,65+ years,70,5,29
+Colorado,2020-12-01,50 to 64 years,17,0,4
+Colorado,2021-01-01,18 to 49 years,12,0,0
+Colorado,2021-08-01,65+ years,20,0,1
+Colorado,2021-09-01,18 to 49 years,55,0,9
+Colorado,2021-09-01,65+ years,91,0,1
+Colorado,2021-10-01,18 to 49 years,15,0,0
+Colorado,2021-11-01,0 - 17 years,49,0,1
+Colorado,2021-11-01,18 to 49 years,16,0,0
+Colorado,2021-12-01,18 to 49 years,92,0,2
+Colorado,2021-12-01,50 to 64 years,44,0,0
+Colorado,2022-01-01,0 - 17 years,22,0,0
+Colorado,2022-01-01,18 to 49 years,91,0,1
+Colorado,2022-03-01,18 to 49 years,25,0,1
+Colorado,2022-06-01,18 to 49 years,92,0,0
+Colorado,2022-06-01,50 to 64 years,63,0,0
+Colorado,2022-07-01,65+ years,25,0,2
+Colorado,2022-08-01,0 - 17 years,19,0,2
+Colorado,2022-08-01,65+ years,1,0,0
+Colorado,2022-09-01,0 - 17 years,11,0,0
+Colorado,2022-11-01,65+ years,31,0,0
+Colorado,2022-12-01,65+ years,29,0,0
+Colorado,2023-10-01,65+ years,25,0,0
+Colorado,2023-12-01,50 to 64 years,3,0,0
+Connecticut,2020-08-01,0 - 17 years,16,0,0
+Connecticut,2021-03-01,0 - 17 years,14,0,0
+Connecticut,2021-05-01,0 - 17 years,12,0,0
+Connecticut,2021-05-01,50 to 64 years,92,0,0
+Connecticut,2021-07-01,18 to 49 years,92,0,0
+Connecticut,2021-07-01,50 to 64 years,15,0,0
+Connecticut,2021-08-01,50 to 64 years,30,0,0
+Connecticut,2021-11-01,18 to 49 years,16,0,0
+Connecticut,2022-03-01,50 to 64 years,51,0,0
+Connecticut,2022-05-01,18 to 49 years,6,0,0
+Connecticut,2022-08-01,50 to 64 years,11,0,0
+Connecticut,2022-09-01,0 - 17 years,1,0,0
+Connecticut,2023-03-01,NA,13,0,0
+Delaware,2021-03-01,18 to 49 years,16,0,0
+Delaware,2021-07-01,65+ years,12,0,0
+Delaware,2021-08-01,0 - 17 years,82,0,0
+Delaware,2021-09-01,50 to 64 years,35,0,0
+Delaware,2021-10-01,0 - 17 years,15,0,0
+Delaware,2021-12-01,NA,17,0,0
+Delaware,2022-02-01,0 - 17 years,10,0,0
+Delaware,2022-03-01,65+ years,1,0,0
+Delaware,2022-06-01,0 - 17 years,10,0,0
+Delaware,2022-07-01,50 to 64 years,42,0,0
+Delaware,2022-07-01,NA,17,0,0
+Delaware,2024-02-01,65+ years,19,0,0
+District of Columbia,2020-12-01,50 to 64 years,9,0,3
+District of Columbia,2021-04-01,0 - 17 years,46,0,2
+District of Columbia,2021-09-01,0 - 17 years,22,0,3
+District of Columbia,2021-11-01,18 to 49 years,14,0,2
+Florida,2020-06-01,0 - 17 years,33,0,2
+Florida,2020-07-01,0 - 17 years,11,0,0
+Florida,2020-07-01,65+ years,12,0,3
+Florida,2020-09-01,0 - 17 years,16,0,0
+Florida,2020-11-01,65+ years,67,10,12
+Florida,2021-01-01,18 to 49 years,184,0,1
+Florida,2021-01-01,50 to 64 years,185,0,6
+Florida,2021-01-01,65+ years,92,7,8
+Florida,2021-02-01,0 - 17 years,12,0,0
+Florida,2021-02-01,18 to 49 years,92,0,2
+Florida,2021-03-01,65+ years,11,0,2
+Florida,2021-04-01,0 - 17 years,104,0,1
+Florida,2021-04-01,50 to 64 years,25,0,1
+Florida,2021-05-01,65+ years,15,0,3
+Florida,2021-06-01,0 - 17 years,39,0,0
+Florida,2021-06-01,50 to 64 years,9,0,5
+Florida,2021-07-01,0 - 17 years,20,0,0
+Florida,2021-07-01,18 to 49 years,16,0,0
+Florida,2021-07-01,50 to 64 years,61,0,6
+Florida,2021-07-01,65+ years,27,0,2
+Florida,2021-08-01,0 - 17 years,103,0,0
+Florida,2021-08-01,18 to 49 years,102,1,2
+Florida,2021-08-01,50 to 64 years,123,0,1
+Florida,2021-09-01,18 to 49 years,276,0,7
+Florida,2021-10-01,65+ years,12,0,1
+Florida,2021-11-01,65+ years,17,0,1
+Florida,2021-12-01,0 - 17 years,65,0,0
+Florida,2021-12-01,18 to 49 years,92,0,0
+Florida,2022-01-01,18 to 49 years,110,0,0
+Florida,2022-01-01,50 to 64 years,92,0,1
+Florida,2022-02-01,0 - 17 years,9,0,0
+Florida,2022-02-01,18 to 49 years,46,0,0
+Florida,2022-02-01,50 to 64 years,100,0,0
+Florida,2022-02-01,65+ years,7,3,2
+Florida,2022-03-01,50 to 64 years,12,0,0
+Florida,2022-03-01,65+ years,20,0,1
+Florida,2022-04-01,50 to 64 years,34,0,1
+Florida,2022-04-01,65+ years,17,0,1
+Florida,2022-05-01,65+ years,14,0,0
+Florida,2022-06-01,0 - 17 years,3,0,0
+Florida,2022-06-01,18 to 49 years,108,0,0
+Florida,2022-07-01,0 - 17 years,35,0,0
+Florida,2022-07-01,50 to 64 years,32,0,0
+Florida,2022-07-01,65+ years,21,0,0
+Florida,2022-12-01,65+ years,5,0,0
+Florida,2023-01-01,18 to 49 years,10,0,0
+Florida,2023-01-01,65+ years,24,0,0
+Florida,2023-02-01,0 - 17 years,8,0,0
+Florida,2023-02-01,18 to 49 years,26,0,0
+Florida,2023-03-01,50 to 64 years,57,0,0
+Florida,2023-03-01,65+ years,46,0,1
+Florida,2023-04-01,0 - 17 years,15,0,0
+Florida,2023-04-01,18 to 49 years,21,0,0
+Florida,2023-04-01,50 to 64 years,12,0,0
+Florida,2023-06-01,18 to 49 years,15,0,0
+Florida,2023-06-01,65+ years,13,0,0
+Florida,2023-07-01,0 - 17 years,18,0,0
+Florida,2023-07-01,18 to 49 years,29,0,0
+Florida,2023-08-01,50 to 64 years,12,0,0
+Florida,2023-08-01,65+ years,20,0,0
+Florida,2023-09-01,18 to 49 years,48,0,0
+Florida,2023-12-01,18 to 49 years,60,0,0
+Florida,2024-01-01,50 to 64 years,24,0,0
+Georgia,2020-06-01,18 to 49 years,92,0,0
+Georgia,2020-07-01,18 to 49 years,243,0,0
+Georgia,2020-08-01,50 to 64 years,14,0,0
+Georgia,2020-09-01,18 to 49 years,111,0,1
+Georgia,2020-11-01,18 to 49 years,92,0,0
+Georgia,2020-12-01,50 to 64 years,16,0,0
+Georgia,2021-01-01,50 to 64 years,51,0,0
+Georgia,2021-01-01,NA,18,0,1
+Georgia,2021-02-01,0 - 17 years,23,0,0
+Georgia,2021-02-01,50 to 64 years,43,0,0
+Georgia,2021-02-01,65+ years,15,0,0
+Georgia,2021-05-01,0 - 17 years,15,0,0
+Georgia,2021-07-01,0 - 17 years,2,0,0
+Georgia,2021-07-01,50 to 64 years,19,0,0
+Georgia,2021-08-01,65+ years,13,0,0
+Georgia,2021-09-01,0 - 17 years,15,0,0
+Georgia,2021-09-01,65+ years,13,0,0
+Georgia,2021-10-01,0 - 17 years,4,0,0
+Georgia,2021-10-01,18 to 49 years,32,0,0
+Georgia,2021-10-01,50 to 64 years,15,0,0
+Georgia,2021-11-01,0 - 17 years,20,0,0
+Georgia,2022-01-01,0 - 17 years,92,0,0
+Georgia,2022-01-01,18 to 49 years,251,0,0
+Georgia,2022-01-01,65+ years,41,0,2
+Georgia,2022-03-01,18 to 49 years,92,0,0
+Georgia,2022-04-01,50 to 64 years,14,0,0
+Georgia,2022-05-01,18 to 49 years,11,0,0
+Georgia,2022-06-01,18 to 49 years,80,0,0
+Georgia,2022-07-01,18 to 49 years,11,0,0
+Georgia,2022-07-01,50 to 64 years,56,0,0
+Georgia,2022-08-01,0 - 17 years,14,0,0
+Georgia,2022-08-01,65+ years,25,0,0
+Georgia,2022-09-01,50 to 64 years,5,0,0
+Georgia,2022-09-01,65+ years,6,0,0
+Georgia,2023-01-01,18 to 49 years,34,0,0
+Georgia,2023-07-01,65+ years,15,0,0
+Georgia,2023-09-01,18 to 49 years,8,0,0
+Georgia,2023-10-01,65+ years,20,0,0
+Georgia,2024-02-01,50 to 64 years,12,0,0
+Hawaii,2021-08-01,18 to 49 years,42,0,0
+Hawaii,2022-04-01,18 to 49 years,25,0,0
+Hawaii,2022-11-01,18 to 49 years,91,0,0
+Hawaii,2023-08-01,50 to 64 years,25,0,0
+Idaho,2020-08-01,50 to 64 years,37,0,2
+Idaho,2020-12-01,65+ years,184,11,49
+Idaho,2021-02-01,18 to 49 years,92,0,4
+Idaho,2021-10-01,50 to 64 years,55,0,6
+Illinois,2020-03-01,65+ years,20,0,10
+Illinois,2020-04-01,18 to 49 years,12,0,2
+Illinois,2020-04-01,50 to 64 years,14,0,2
+Illinois,2020-05-01,0 - 17 years,20,0,0
+Illinois,2020-07-01,18 to 49 years,17,0,1
+Illinois,2020-08-01,18 to 49 years,14,0,0
+Illinois,2020-09-01,50 to 64 years,59,0,5
+Illinois,2020-10-01,0 - 17 years,25,0,0
+Illinois,2020-10-01,18 to 49 years,77,0,0
+Illinois,2020-11-01,0 - 17 years,18,0,0
+Illinois,2020-11-01,18 to 49 years,57,0,0
+Illinois,2020-12-01,50 to 64 years,57,0,4
+Illinois,2021-01-01,18 to 49 years,44,0,0
+Illinois,2021-01-01,65+ years,30,0,7
+Illinois,2021-04-01,18 to 49 years,67,0,2
+Illinois,2021-05-01,50 to 64 years,14,0,0
+Illinois,2021-07-01,0 - 17 years,27,0,0
+Illinois,2021-07-01,18 to 49 years,17,0,3
+Illinois,2021-08-01,0 - 17 years,7,0,0
+Illinois,2021-08-01,18 to 49 years,15,0,0
+Illinois,2021-08-01,65+ years,50,0,11
+Illinois,2021-09-01,0 - 17 years,29,0,0
+Illinois,2021-09-01,18 to 49 years,35,0,0
+Illinois,2021-11-01,0 - 17 years,43,0,0
+Illinois,2021-12-01,0 - 17 years,69,0,0
+Illinois,2021-12-01,18 to 49 years,375,0,3
+Illinois,2021-12-01,50 to 64 years,45,0,4
+Illinois,2021-12-01,65+ years,45,0,0
+Illinois,2022-01-01,50 to 64 years,177,0,1
+Illinois,2022-02-01,65+ years,12,0,1
+Illinois,2022-04-01,18 to 49 years,55,0,0
+Illinois,2022-05-01,0 - 17 years,15,0,0
+Illinois,2022-05-01,18 to 49 years,19,0,0
+Illinois,2022-06-01,18 to 49 years,3,0,0
+Illinois,2022-08-01,50 to 64 years,40,0,0
+Illinois,2022-08-01,65+ years,88,0,8
+Illinois,2022-09-01,0 - 17 years,29,0,0
+Illinois,2022-09-01,18 to 49 years,46,0,0
+Illinois,2022-10-01,65+ years,16,0,4
+Illinois,2022-11-01,18 to 49 years,18,0,0
+Illinois,2022-12-01,50 to 64 years,11,0,0
+Illinois,2023-09-01,18 to 49 years,13,0,0
+Illinois,2023-09-01,65+ years,50,0,2
+Illinois,2023-11-01,50 to 64 years,15,0,0
+Illinois,2023-12-01,18 to 49 years,19,0,0
+Indiana,2020-11-01,18 to 49 years,89,0,0
+Indiana,2020-11-01,50 to 64 years,92,0,2
+Indiana,2020-12-01,18 to 49 years,92,0,0
+Indiana,2020-12-01,65+ years,92,7,0
+Indiana,2021-01-01,0 - 17 years,11,0,0
+Indiana,2021-01-01,18 to 49 years,92,0,0
+Indiana,2021-01-01,65+ years,128,8,4
+Indiana,2021-04-01,18 to 49 years,13,0,0
+Indiana,2021-06-01,50 to 64 years,21,0,0
+Indiana,2021-08-01,0 - 17 years,67,0,0
+Indiana,2021-08-01,18 to 49 years,92,0,1
+Indiana,2021-09-01,0 - 17 years,92,0,0
+Indiana,2021-11-01,18 to 49 years,66,0,0
+Indiana,2021-12-01,50 to 64 years,5,0,0
+Indiana,2021-12-01,65+ years,25,0,0
+Indiana,2022-01-01,18 to 49 years,92,0,0
+Indiana,2022-05-01,18 to 49 years,75,0,0
+Indiana,2022-12-01,18 to 49 years,92,0,0
+Indiana,2023-01-01,18 to 49 years,17,0,0
+Indiana,2023-05-01,65+ years,20,0,0
+Indiana,2023-12-01,18 to 49 years,15,0,0
+Iowa,2020-07-01,18 to 49 years,81,0,2
+Iowa,2021-02-01,18 to 49 years,11,0,0
+Kansas,2020-05-01,18 to 49 years,11,0,0
+Kansas,2020-06-01,18 to 49 years,65,0,5
+Kansas,2020-12-01,18 to 49 years,21,0,0
+Kansas,2021-01-01,0 - 17 years,20,0,1
+Kansas,2021-02-01,18 to 49 years,92,0,1
+Kansas,2021-08-01,50 to 64 years,62,0,5
+Kansas,2022-01-01,18 to 49 years,71,0,0
+Kansas,2022-01-01,65+ years,27,0,3
+Kentucky,2020-12-01,18 to 49 years,91,0,0
+Kentucky,2020-12-01,50 to 64 years,92,0,5
+Kentucky,2021-01-01,18 to 49 years,16,0,0
+Kentucky,2021-02-01,50 to 64 years,11,0,0
+Kentucky,2021-11-01,50 to 64 years,28,0,0
+Kentucky,2021-12-01,18 to 49 years,92,0,4
+Kentucky,2022-05-01,18 to 49 years,112,0,1
+Kentucky,2022-09-01,50 to 64 years,17,0,0
+Kentucky,2023-09-01,18 to 49 years,91,0,0
+Kentucky,2023-11-01,0 - 17 years,1,0,0
+Louisiana,2020-05-01,50 to 64 years,14,0,0
+Louisiana,2020-05-01,65+ years,15,0,0
+Louisiana,2020-07-01,0 - 17 years,11,0,0
+Louisiana,2020-08-01,65+ years,17,0,1
+Louisiana,2020-09-01,18 to 49 years,68,0,0
+Louisiana,2020-10-01,65+ years,21,0,2
+Louisiana,2020-11-01,18 to 49 years,35,0,1
+Louisiana,2020-11-01,50 to 64 years,22,0,0
+Louisiana,2020-12-01,18 to 49 years,92,0,2
+Louisiana,2020-12-01,65+ years,18,0,2
+Louisiana,2021-01-01,18 to 49 years,35,0,0
+Louisiana,2021-02-01,18 to 49 years,58,0,1
+Louisiana,2021-03-01,18 to 49 years,12,0,0
+Louisiana,2021-03-01,65+ years,39,0,8
+Louisiana,2021-04-01,18 to 49 years,25,0,0
+Louisiana,2021-07-01,18 to 49 years,92,0,0
+Louisiana,2021-08-01,18 to 49 years,80,0,0
+Louisiana,2021-08-01,50 to 64 years,7,0,0
+Louisiana,2021-10-01,0 - 17 years,16,0,0
+Louisiana,2021-10-01,18 to 49 years,40,0,0
+Louisiana,2021-12-01,0 - 17 years,23,0,0
+Louisiana,2021-12-01,18 to 49 years,183,0,0
+Louisiana,2021-12-01,50 to 64 years,12,0,0
+Louisiana,2022-01-01,0 - 17 years,24,0,0
+Louisiana,2022-01-01,18 to 49 years,22,0,0
+Louisiana,2022-01-01,65+ years,92,0,0
+Louisiana,2022-03-01,65+ years,19,0,0
+Louisiana,2022-06-01,18 to 49 years,34,0,0
+Louisiana,2022-06-01,65+ years,19,0,0
+Louisiana,2022-08-01,0 - 17 years,9,0,0
+Louisiana,2022-09-01,0 - 17 years,20,0,0
+Louisiana,2022-09-01,18 to 49 years,65,0,0
+Louisiana,2022-09-01,50 to 64 years,12,0,0
+Louisiana,2022-09-01,65+ years,5,0,0
+Louisiana,2023-02-01,0 - 17 years,14,0,0
+Louisiana,2023-03-01,0 - 17 years,20,0,0
+Louisiana,2023-03-01,NA,13,0,0
+Louisiana,2023-04-01,65+ years,7,0,0
+Louisiana,2023-05-01,0 - 17 years,3,0,0
+Louisiana,2023-06-01,65+ years,20,0,0
+Louisiana,2023-10-01,18 to 49 years,43,0,0
+Maine,2020-03-01,NA,12,0,3
+Maine,2020-11-01,NA,18,0,1
+Maine,2020-12-01,18 to 49 years,76,0,0
+Maine,2020-12-01,65+ years,83,8,10
+Maine,2021-08-01,18 to 49 years,27,0,0
+Maine,2021-10-01,65+ years,9,1,2
+Maine,2023-04-01,50 to 64 years,25,0,0
+Maine,2023-11-01,0 - 17 years,24,0,0
+Maine,2023-12-01,50 to 64 years,2,0,0
+Maryland,2020-04-01,65+ years,27,0,3
+Maryland,2020-05-01,0 - 17 years,14,0,0
+Maryland,2020-05-01,18 to 49 years,15,0,1
+Maryland,2020-10-01,18 to 49 years,43,0,0
+Maryland,2020-11-01,18 to 49 years,10,0,0
+Maryland,2020-12-01,65+ years,16,0,2
+Maryland,2021-01-01,18 to 49 years,72,0,0
+Maryland,2021-03-01,18 to 49 years,15,0,1
+Maryland,2021-08-01,0 - 17 years,20,0,1
+Maryland,2021-12-01,18 to 49 years,81,0,5
+Maryland,2021-12-01,50 to 64 years,92,0,25
+Maryland,2022-01-01,18 to 49 years,29,0,2
+Maryland,2022-01-01,65+ years,1,0,0
+Maryland,2022-04-01,18 to 49 years,11,0,0
+Maryland,2022-05-01,0 - 17 years,29,0,0
+Maryland,2022-05-01,18 to 49 years,230,0,0
+Maryland,2022-06-01,0 - 17 years,69,0,1
+Maryland,2022-06-01,18 to 49 years,63,0,0
+Maryland,2022-08-01,0 - 17 years,23,0,0
+Maryland,2022-09-01,18 to 49 years,54,0,0
+Maryland,2022-12-01,18 to 49 years,37,0,3
+Maryland,2023-08-01,0 - 17 years,11,0,0
+Maryland,2023-08-01,65+ years,31,0,9
+Maryland,2024-02-01,18 to 49 years,18,0,0
+Massachusetts,2020-11-01,18 to 49 years,91,0,0
+Massachusetts,2020-11-01,65+ years,70,0,6
+Massachusetts,2021-03-01,18 to 49 years,92,0,0
+Massachusetts,2021-08-01,18 to 49 years,10,0,0
+Massachusetts,2021-09-01,65+ years,41,0,4
+Massachusetts,2021-10-01,0 - 17 years,33,0,0
+Massachusetts,2021-10-01,18 to 49 years,10,0,0
+Massachusetts,2021-12-01,0 - 17 years,42,0,0
+Massachusetts,2021-12-01,18 to 49 years,92,0,0
+Massachusetts,2022-01-01,18 to 49 years,92,0,0
+Massachusetts,2022-01-01,65+ years,17,0,1
+Massachusetts,2022-05-01,0 - 17 years,41,0,0
+Massachusetts,2022-06-01,0 - 17 years,83,0,0
+Massachusetts,2022-06-01,65+ years,12,0,0
+Massachusetts,2022-07-01,18 to 49 years,92,0,1
+Massachusetts,2022-08-01,65+ years,38,0,4
+Massachusetts,2022-12-01,18 to 49 years,54,0,0
+Massachusetts,2023-01-01,65+ years,81,0,0
+Massachusetts,2024-02-01,18 to 49 years,23,0,0
+Michigan,2020-09-01,0 - 17 years,22,0,0
+Michigan,2020-09-01,18 to 49 years,55,0,0
+Michigan,2020-12-01,18 to 49 years,55,0,0
+Michigan,2021-01-01,18 to 49 years,82,0,0
+Michigan,2021-02-01,65+ years,43,0,10
+Michigan,2021-03-01,18 to 49 years,63,0,0
+Michigan,2021-04-01,18 to 49 years,92,0,3
+Michigan,2021-09-01,18 to 49 years,91,0,1
+Michigan,2021-11-01,18 to 49 years,92,0,5
+Michigan,2021-11-01,50 to 64 years,40,0,0
+Michigan,2021-12-01,18 to 49 years,249,0,0
+Michigan,2022-01-01,0 - 17 years,92,0,0
+Michigan,2022-01-01,18 to 49 years,92,0,0
+Michigan,2022-02-01,18 to 49 years,102,0,0
+Michigan,2022-02-01,65+ years,34,0,6
+Michigan,2022-03-01,0 - 17 years,29,0,0
+Michigan,2022-03-01,18 to 49 years,13,0,0
+Michigan,2022-04-01,18 to 49 years,92,0,0
+Michigan,2022-05-01,50 to 64 years,15,0,0
+Michigan,2022-08-01,50 to 64 years,63,0,4
+Michigan,2022-09-01,0 - 17 years,37,0,1
+Michigan,2022-11-01,18 to 49 years,128,0,0
+Michigan,2022-12-01,0 - 17 years,51,0,1
+Michigan,2022-12-01,65+ years,70,0,7
+Michigan,2023-03-01,18 to 49 years,25,0,0
+Michigan,2024-02-01,50 to 64 years,15,0,0
+Minnesota,2020-03-01,18 to 49 years,18,0,3
+Minnesota,2020-08-01,0 - 17 years,36,0,1
+Minnesota,2020-12-01,0 - 17 years,38,0,1
+Minnesota,2021-01-01,0 - 17 years,15,0,0
+Minnesota,2021-02-01,18 to 49 years,23,0,3
+Minnesota,2021-04-01,18 to 49 years,90,0,4
+Minnesota,2021-09-01,18 to 49 years,92,0,2
+Minnesota,2021-11-01,18 to 49 years,140,0,6
+Minnesota,2021-12-01,0 - 17 years,5,0,0
+Minnesota,2021-12-01,18 to 49 years,27,0,1
+Minnesota,2021-12-01,50 to 64 years,22,0,1
+Minnesota,2022-01-01,0 - 17 years,92,0,0
+Minnesota,2022-01-01,18 to 49 years,38,0,0
+Minnesota,2022-05-01,18 to 49 years,54,0,2
+Minnesota,2022-06-01,50 to 64 years,3,0,0
+Minnesota,2022-07-01,50 to 64 years,20,0,2
+Minnesota,2022-09-01,18 to 49 years,13,0,0
+Minnesota,2022-10-01,65+ years,92,0,18
+Minnesota,2022-11-01,65+ years,11,0,0
+Minnesota,2022-12-01,65+ years,18,0,10
+Minnesota,2023-03-01,18 to 49 years,18,0,0
+Minnesota,2023-12-01,65+ years,29,0,5
+Minnesota,2024-01-01,0 - 17 years,25,0,0
+Mississippi,2020-10-01,18 to 49 years,94,0,1
+Mississippi,2020-11-01,50 to 64 years,11,0,0
+Mississippi,2020-12-01,0 - 17 years,37,0,0
+Mississippi,2021-04-01,18 to 49 years,11,0,0
+Mississippi,2021-05-01,0 - 17 years,1,0,0
+Mississippi,2021-09-01,50 to 64 years,64,0,3
+Mississippi,2022-01-01,0 - 17 years,28,0,0
+Mississippi,2022-01-01,18 to 49 years,13,0,0
+Mississippi,2022-05-01,50 to 64 years,27,0,0
+Mississippi,2022-07-01,18 to 49 years,75,0,0
+Mississippi,2022-08-01,0 - 17 years,5,0,0
+Missouri,2020-07-01,18 to 49 years,53,0,1
+Missouri,2020-10-01,18 to 49 years,46,0,2
+Missouri,2020-11-01,50 to 64 years,92,0,1
+Missouri,2020-12-01,18 to 49 years,92,0,0
+Missouri,2020-12-01,65+ years,92,12,0
+Missouri,2021-01-01,50 to 64 years,11,0,0
+Missouri,2021-05-01,65+ years,20,0,5
+Missouri,2021-11-01,0 - 17 years,1,0,0
+Missouri,2021-11-01,18 to 49 years,92,0,2
+Missouri,2022-01-01,0 - 17 years,92,0,0
+Missouri,2022-01-01,50 to 64 years,81,0,0
+Missouri,2022-08-01,18 to 49 years,74,0,0
+Missouri,2022-10-01,18 to 49 years,46,0,2
+Missouri,2023-07-01,18 to 49 years,19,0,0
+Missouri,2023-08-01,0 - 17 years,17,0,0
+Montana,2021-08-01,65+ years,37,0,8
+Montana,2021-09-01,65+ years,33,0,5
+Montana,2021-10-01,0 - 17 years,12,0,0
+Montana,2021-10-01,18 to 49 years,60,0,1
+Montana,2022-01-01,65+ years,19,0,4
+Montana,2023-12-01,65+ years,22,0,0
+Nebraska,2021-01-01,18 to 49 years,92,0,0
+Nebraska,2022-03-01,18 to 49 years,92,0,0
+Nebraska,2022-09-01,18 to 49 years,92,0,0
+Nevada,2020-12-01,18 to 49 years,92,0,1
+Nevada,2021-01-01,18 to 49 years,92,0,3
+New Hampshire,2021-01-01,18 to 49 years,92,0,0
+New Hampshire,2021-10-01,18 to 49 years,92,0,4
+New Hampshire,2021-10-01,65+ years,92,0,13
+New Hampshire,2021-11-01,0 - 17 years,78,0,0
+New Hampshire,2022-01-01,50 to 64 years,14,0,1
+New Jersey,2020-04-01,65+ years,18,0,7
+New Jersey,2020-05-01,65+ years,11,0,3
+New Jersey,2020-09-01,NA,25,0,7
+New Jersey,2020-10-01,18 to 49 years,12,0,1
+New Jersey,2020-11-01,18 to 49 years,6,0,0
+New Jersey,2020-11-01,65+ years,11,0,5
+New Jersey,2020-12-01,18 to 49 years,92,0,2
+New Jersey,2020-12-01,Missing,11,0,0
+New Jersey,2021-01-01,50 to 64 years,16,0,1
+New Jersey,2021-02-01,0 - 17 years,17,0,0
+New Jersey,2021-02-01,18 to 49 years,6,0,0
+New Jersey,2021-03-01,50 to 64 years,12,0,1
+New Jersey,2021-07-01,0 - 17 years,11,0,0
+New Jersey,2021-09-01,0 - 17 years,86,0,1
+New Jersey,2021-09-01,18 to 49 years,28,0,1
+New Jersey,2021-09-01,50 to 64 years,11,0,1
+New Jersey,2021-09-01,65+ years,18,0,4
+New Jersey,2021-10-01,50 to 64 years,64,0,2
+New Jersey,2021-11-01,50 to 64 years,13,0,0
+New Jersey,2021-11-01,NA,18,0,0
+New Jersey,2021-12-01,0 - 17 years,98,0,4
+New Jersey,2021-12-01,18 to 49 years,276,0,15
+New Jersey,2022-01-01,0 - 17 years,153,0,0
+New Jersey,2022-01-01,18 to 49 years,134,0,2
+New Jersey,2022-01-01,65+ years,2,0,0
+New Jersey,2022-02-01,50 to 64 years,20,0,1
+New Jersey,2022-02-01,Missing,11,0,0
+New Jersey,2022-04-01,18 to 49 years,25,0,2
+New Jersey,2022-05-01,0 - 17 years,12,0,0
+New Jersey,2022-05-01,18 to 49 years,229,0,10
+New Jersey,2022-06-01,18 to 49 years,56,0,4
+New Jersey,2022-07-01,0 - 17 years,11,0,0
+New Jersey,2022-07-01,18 to 49 years,13,0,1
+New Jersey,2022-08-01,18 to 49 years,32,0,1
+New Jersey,2022-09-01,50 to 64 years,11,0,0
+New Jersey,2022-11-01,0 - 17 years,15,0,5
+New Jersey,2022-11-01,65+ years,11,0,3
+New Jersey,2022-12-01,65+ years,29,0,12
+New Jersey,2023-01-01,50 to 64 years,19,0,0
+New Jersey,2023-02-01,0 - 17 years,16,0,0
+New Jersey,2023-02-01,18 to 49 years,75,0,2
+New Jersey,2023-07-01,18 to 49 years,28,0,0
+New Jersey,2023-08-01,0 - 17 years,12,0,1
+New Jersey,2023-09-01,50 to 64 years,15,0,0
+New Jersey,2023-11-01,18 to 49 years,26,0,1
+New Jersey,2023-12-01,65+ years,9,0,1
+New Jersey,2024-02-01,65+ years,13,0,5
+New Mexico,2020-06-01,18 to 49 years,27,0,1
+New Mexico,2020-07-01,0 - 17 years,32,0,0
+New Mexico,2020-10-01,65+ years,22,0,4
+New Mexico,2020-11-01,65+ years,60,13,19
+New Mexico,2021-01-01,65+ years,12,0,1
+New Mexico,2021-09-01,50 to 64 years,4,0,1
+New Mexico,2021-11-01,0 - 17 years,52,0,2
+New Mexico,2022-01-01,0 - 17 years,91,0,1
+New Mexico,2022-01-01,18 to 49 years,34,0,1
+New Mexico,2022-01-01,65+ years,3,0,0
+New Mexico,2022-08-01,65+ years,14,0,3
+New Mexico,2022-10-01,50 to 64 years,107,0,2
+New Mexico,2023-01-01,50 to 64 years,11,0,1
+New Mexico,2023-03-01,18 to 49 years,23,0,2
+New Mexico,2023-05-01,50 to 64 years,11,0,0
+New Mexico,2023-08-01,50 to 64 years,13,0,0
+New Mexico,2023-10-01,65+ years,55,0,3
+New Mexico,2023-12-01,18 to 49 years,13,0,2
+New Mexico,2024-06-01,50 to 64 years,13,0,0
+New York,2020-03-01,50 to 64 years,12,0,0
+New York,2020-04-01,18 to 49 years,78,0,14
+New York,2020-05-01,18 to 49 years,46,0,0
+New York,2020-07-01,0 - 17 years,15,0,0
+New York,2020-07-01,50 to 64 years,14,0,0
+New York,2020-08-01,50 to 64 years,17,0,0
+New York,2020-08-01,65+ years,18,0,0
+New York,2020-09-01,18 to 49 years,11,0,0
+New York,2020-10-01,50 to 64 years,28,0,0
+New York,2020-11-01,18 to 49 years,13,0,0
+New York,2020-11-01,50 to 64 years,23,0,5
+New York,2020-11-01,65+ years,6,0,0
+New York,2020-12-01,50 to 64 years,20,0,0
+New York,2020-12-01,65+ years,34,0,2
+New York,2021-01-01,18 to 49 years,28,0,1
+New York,2021-01-01,50 to 64 years,28,0,0
+New York,2021-01-01,65+ years,86,0,17
+New York,2021-03-01,18 to 49 years,159,0,1
+New York,2021-04-01,18 to 49 years,8,0,2
+New York,2021-05-01,18 to 49 years,86,0,3
+New York,2021-05-01,50 to 64 years,15,0,1
+New York,2021-07-01,18 to 49 years,25,0,0
+New York,2021-08-01,50 to 64 years,26,0,3
+New York,2021-09-01,0 - 17 years,36,0,1
+New York,2021-09-01,50 to 64 years,50,0,3
+New York,2021-11-01,50 to 64 years,6,0,0
+New York,2021-12-01,0 - 17 years,331,0,6
+New York,2021-12-01,18 to 49 years,142,0,1
+New York,2021-12-01,50 to 64 years,183,0,0
+New York,2021-12-01,65+ years,51,0,1
+New York,2022-01-01,0 - 17 years,62,0,0
+New York,2022-01-01,18 to 49 years,73,0,1
+New York,2022-02-01,50 to 64 years,2,0,0
+New York,2022-03-01,18 to 49 years,31,0,0
+New York,2022-03-01,65+ years,7,0,1
+New York,2022-04-01,50 to 64 years,79,0,1
+New York,2022-05-01,0 - 17 years,11,0,0
+New York,2022-05-01,50 to 64 years,14,0,0
+New York,2022-05-01,NA,13,0,1
+New York,2022-07-01,18 to 49 years,21,0,0
+New York,2022-09-01,18 to 49 years,76,0,1
+New York,2022-09-01,50 to 64 years,92,0,5
+New York,2022-10-01,65+ years,7,0,1
+New York,2022-11-01,0 - 17 years,6,0,0
+New York,2022-11-01,65+ years,22,0,0
+New York,2023-01-01,0 - 17 years,16,0,0
+New York,2023-03-01,18 to 49 years,35,0,0
+New York,2023-09-01,18 to 49 years,37,0,0
+New York,2023-11-01,65+ years,16,0,0
+New York,2023-12-01,0 - 17 years,20,0,0
+New York,2023-12-01,50 to 64 years,3,0,0
+New York,2024-02-01,18 to 49 years,46,0,0
+New York,2024-02-01,65+ years,14,0,2
+North Carolina,2020-06-01,18 to 49 years,36,0,2
+North Carolina,2020-06-01,50 to 64 years,31,0,1
+North Carolina,2020-07-01,18 to 49 years,1,0,0
+North Carolina,2020-07-01,65+ years,1,0,0
+North Carolina,2020-08-01,0 - 17 years,11,0,0
+North Carolina,2020-09-01,0 - 17 years,15,0,0
+North Carolina,2020-09-01,18 to 49 years,35,0,1
+North Carolina,2020-09-01,65+ years,18,0,3
+North Carolina,2020-10-01,50 to 64 years,18,0,0
+North Carolina,2020-11-01,0 - 17 years,26,0,0
+North Carolina,2020-11-01,50 to 64 years,38,0,0
+North Carolina,2020-12-01,0 - 17 years,54,0,1
+North Carolina,2020-12-01,18 to 49 years,36,0,0
+North Carolina,2020-12-01,50 to 64 years,109,0,8
+North Carolina,2020-12-01,65+ years,68,0,0
+North Carolina,2021-01-01,18 to 49 years,92,0,0
+North Carolina,2021-02-01,50 to 64 years,25,0,0
+North Carolina,2021-03-01,50 to 64 years,20,0,2
+North Carolina,2021-07-01,0 - 17 years,26,0,0
+North Carolina,2021-07-01,65+ years,16,0,5
+North Carolina,2021-08-01,0 - 17 years,92,0,0
+North Carolina,2021-08-01,65+ years,1,0,0
+North Carolina,2021-09-01,50 to 64 years,85,0,4
+North Carolina,2021-12-01,18 to 49 years,91,0,0
+North Carolina,2021-12-01,50 to 64 years,19,0,0
+North Carolina,2022-01-01,0 - 17 years,139,0,0
+North Carolina,2022-01-01,18 to 49 years,276,0,0
+North Carolina,2022-01-01,50 to 64 years,66,0,1
+North Carolina,2022-01-01,65+ years,71,0,7
+North Carolina,2022-02-01,18 to 49 years,108,0,0
+North Carolina,2022-03-01,50 to 64 years,13,0,1
+North Carolina,2022-04-01,65+ years,5,0,0
+North Carolina,2022-05-01,18 to 49 years,92,0,0
+North Carolina,2022-07-01,18 to 49 years,183,0,0
+North Carolina,2022-07-01,65+ years,38,0,1
+North Carolina,2022-08-01,18 to 49 years,30,0,0
+North Carolina,2022-09-01,0 - 17 years,38,0,0
+North Carolina,2022-09-01,18 to 49 years,12,0,0
+North Carolina,2022-09-01,50 to 64 years,26,0,2
+North Carolina,2022-10-01,18 to 49 years,30,0,0
+North Carolina,2022-10-01,65+ years,110,0,5
+North Carolina,2022-11-01,0 - 17 years,33,0,0
+North Carolina,2022-12-01,18 to 49 years,21,0,1
+North Carolina,2022-12-01,65+ years,16,0,1
+North Carolina,2023-01-01,18 to 49 years,76,0,3
+North Carolina,2023-01-01,65+ years,16,0,1
+North Carolina,2023-02-01,0 - 17 years,12,0,0
+North Carolina,2023-03-01,50 to 64 years,12,0,0
+North Dakota,2021-09-01,50 to 64 years,39,0,2
+North Dakota,2021-10-01,0 - 17 years,92,0,1
+North Dakota,2021-11-01,0 - 17 years,52,0,0
+Ohio,2020-04-01,18 to 49 years,45,0,5
+Ohio,2020-09-01,18 to 49 years,16,0,0
+Ohio,2020-10-01,0 - 17 years,93,0,2
+Ohio,2020-10-01,50 to 64 years,7,0,1
+Ohio,2020-11-01,0 - 17 years,75,0,0
+Ohio,2020-11-01,18 to 49 years,54,0,1
+Ohio,2020-11-01,50 to 64 years,38,0,4
+Ohio,2020-12-01,0 - 17 years,25,0,0
+Ohio,2020-12-01,50 to 64 years,31,0,1
+Ohio,2021-01-01,0 - 17 years,12,0,0
+Ohio,2021-01-01,18 to 49 years,264,0,0
+Ohio,2021-01-01,65+ years,109,11,26
+Ohio,2021-02-01,18 to 49 years,57,0,0
+Ohio,2021-02-01,NA,21,0,0
+Ohio,2021-03-01,0 - 17 years,23,0,0
+Ohio,2021-04-01,18 to 49 years,15,0,0
+Ohio,2021-04-01,50 to 64 years,53,0,5
+Ohio,2021-05-01,18 to 49 years,22,0,0
+Ohio,2021-05-01,65+ years,11,0,2
+Ohio,2021-06-01,18 to 49 years,13,0,0
+Ohio,2021-07-01,NA,11,0,4
+Ohio,2021-08-01,0 - 17 years,14,0,0
+Ohio,2021-08-01,50 to 64 years,15,0,1
+Ohio,2021-08-01,65+ years,17,0,1
+Ohio,2021-09-01,0 - 17 years,14,0,0
+Ohio,2021-09-01,50 to 64 years,12,0,1
+Ohio,2021-09-01,65+ years,43,0,9
+Ohio,2021-10-01,18 to 49 years,104,0,3
+Ohio,2021-11-01,18 to 49 years,6,0,1
+Ohio,2021-12-01,0 - 17 years,92,0,1
+Ohio,2022-01-01,18 to 49 years,82,0,0
+Ohio,2022-01-01,50 to 64 years,92,0,2
+Ohio,2022-02-01,18 to 49 years,45,0,1
+Ohio,2022-02-01,50 to 64 years,47,0,1
+Ohio,2022-04-01,0 - 17 years,23,0,1
+Ohio,2022-05-01,65+ years,15,0,0
+Ohio,2022-06-01,18 to 49 years,27,0,0
+Ohio,2022-06-01,50 to 64 years,25,0,1
+Ohio,2022-06-01,65+ years,12,0,1
+Ohio,2022-08-01,0 - 17 years,7,0,0
+Ohio,2022-08-01,50 to 64 years,23,0,0
+Ohio,2022-09-01,18 to 49 years,21,0,0
+Ohio,2022-09-01,NA,20,0,0
+Ohio,2022-10-01,0 - 17 years,17,0,0
+Ohio,2022-10-01,65+ years,2,0,1
+Ohio,2022-10-01,NA,29,0,0
+Ohio,2023-01-01,0 - 17 years,57,0,1
+Ohio,2023-01-01,18 to 49 years,91,0,1
+Ohio,2023-02-01,50 to 64 years,16,0,0
+Ohio,2023-03-01,0 - 17 years,11,0,0
+Ohio,2023-04-01,50 to 64 years,26,0,5
+Ohio,2023-04-01,65+ years,35,0,0
+Ohio,2023-06-01,NA,13,0,1
+Ohio,2023-08-01,0 - 17 years,26,0,0
+Ohio,2023-11-01,18 to 49 years,43,0,0
+Ohio,2023-12-01,0 - 17 years,19,0,1
+Ohio,2023-12-01,50 to 64 years,2,0,0
+Ohio,2024-01-01,0 - 17 years,16,0,0
+Ohio,2024-02-01,0 - 17 years,11,0,0
+Ohio,2024-03-01,50 to 64 years,11,0,0
+Ohio,2024-03-01,65+ years,28,0,4
+Oklahoma,2020-03-01,50 to 64 years,15,0,5
+Oklahoma,2020-10-01,50 to 64 years,22,0,1
+Oklahoma,2021-01-01,18 to 49 years,8,0,1
+Oklahoma,2021-02-01,18 to 49 years,58,0,4
+Oklahoma,2021-02-01,65+ years,27,0,3
+Oklahoma,2021-03-01,18 to 49 years,21,0,0
+Oklahoma,2021-05-01,18 to 49 years,28,0,0
+Oklahoma,2021-09-01,18 to 49 years,11,0,0
+Oklahoma,2021-09-01,65+ years,37,0,7
+Oklahoma,2021-10-01,18 to 49 years,50,0,1
+Oregon,2020-04-01,65+ years,24,0,9
+Oregon,2020-07-01,50 to 64 years,12,0,0
+Oregon,2020-07-01,65+ years,28,0,11
+Oregon,2020-09-01,65+ years,26,0,8
+Oregon,2020-12-01,65+ years,12,0,4
+Oregon,2021-01-01,65+ years,20,0,3
+Oregon,2021-05-01,0 - 17 years,33,0,1
+Oregon,2021-08-01,18 to 49 years,120,0,5
+Oregon,2021-09-01,50 to 64 years,12,0,0
+Oregon,2021-09-01,NA,23,0,1
+Oregon,2021-10-01,18 to 49 years,97,0,5
+Oregon,2022-01-01,0 - 17 years,89,0,0
+Oregon,2022-01-01,18 to 49 years,8,0,0
+Oregon,2022-04-01,0 - 17 years,4,0,0
+Oregon,2022-07-01,18 to 49 years,64,0,0
+Oregon,2022-10-01,65+ years,25,0,0
+Oregon,2023-02-01,50 to 64 years,14,0,0
+Oregon,2023-03-01,18 to 49 years,11,0,0
+Oregon,2023-05-01,18 to 49 years,22,0,0
+Pennsylvania,2020-07-01,18 to 49 years,30,0,0
+Pennsylvania,2020-07-01,50 to 64 years,11,0,1
+Pennsylvania,2020-11-01,0 - 17 years,76,0,2
+Pennsylvania,2020-11-01,18 to 49 years,25,0,0
+Pennsylvania,2020-11-01,65+ years,92,11,19
+Pennsylvania,2020-12-01,18 to 49 years,110,0,1
+Pennsylvania,2020-12-01,NA,18,0,0
+Pennsylvania,2021-01-01,0 - 17 years,63,0,0
+Pennsylvania,2021-01-01,18 to 49 years,45,0,0
+Pennsylvania,2021-01-01,65+ years,18,0,1
+Pennsylvania,2021-02-01,18 to 49 years,45,0,0
+Pennsylvania,2021-03-01,18 to 49 years,92,0,0
+Pennsylvania,2021-04-01,18 to 49 years,18,0,0
+Pennsylvania,2021-09-01,18 to 49 years,29,0,0
+Pennsylvania,2021-09-01,50 to 64 years,19,0,0
+Pennsylvania,2021-10-01,18 to 49 years,92,0,1
+Pennsylvania,2021-10-01,65+ years,38,0,2
+Pennsylvania,2021-11-01,0 - 17 years,137,0,0
+Pennsylvania,2021-11-01,18 to 49 years,92,0,0
+Pennsylvania,2021-11-01,50 to 64 years,92,0,3
+Pennsylvania,2021-11-01,65+ years,92,4,0
+Pennsylvania,2021-12-01,18 to 49 years,411,0,4
+Pennsylvania,2021-12-01,50 to 64 years,171,0,2
+Pennsylvania,2022-01-01,18 to 49 years,229,0,1
+Pennsylvania,2022-01-01,50 to 64 years,5,0,0
+Pennsylvania,2022-04-01,50 to 64 years,14,0,0
+Pennsylvania,2022-05-01,18 to 49 years,30,0,1
+Pennsylvania,2022-05-01,50 to 64 years,42,0,0
+Pennsylvania,2022-06-01,0 - 17 years,16,0,1
+Pennsylvania,2022-06-01,18 to 49 years,35,0,0
+Pennsylvania,2022-06-01,50 to 64 years,105,0,6
+Pennsylvania,2022-07-01,18 to 49 years,21,0,0
+Pennsylvania,2022-08-01,18 to 49 years,25,0,0
+Pennsylvania,2022-09-01,0 - 17 years,87,0,0
+Pennsylvania,2022-10-01,18 to 49 years,15,0,0
+Pennsylvania,2022-11-01,18 to 49 years,30,0,2
+Pennsylvania,2022-12-01,50 to 64 years,50,0,0
+Pennsylvania,2023-03-01,50 to 64 years,17,0,0
+Pennsylvania,2023-05-01,0 - 17 years,8,0,0
+Pennsylvania,2023-10-01,18 to 49 years,74,0,1
+Pennsylvania,2023-12-01,18 to 49 years,13,0,0
+Pennsylvania,2024-02-01,18 to 49 years,34,0,0
+Rhode Island,2020-11-01,18 to 49 years,19,0,0
+Rhode Island,2021-01-01,65+ years,15,0,0
+Rhode Island,2021-03-01,0 - 17 years,12,0,0
+Rhode Island,2021-06-01,18 to 49 years,12,0,0
+Rhode Island,2021-10-01,18 to 49 years,12,0,0
+Rhode Island,2022-04-01,65+ years,3,0,0
+Rhode Island,2022-05-01,50 to 64 years,18,0,0
+Rhode Island,2022-05-01,65+ years,11,0,0
+Rhode Island,2022-06-01,0 - 17 years,56,0,0
+Rhode Island,2022-08-01,65+ years,15,0,0
+Rhode Island,2022-09-01,18 to 49 years,31,0,0
+Rhode Island,2022-10-01,18 to 49 years,17,0,0
+Rhode Island,2022-12-01,18 to 49 years,15,0,0
+Rhode Island,2023-01-01,50 to 64 years,17,0,0
+Rhode Island,2023-06-01,18 to 49 years,12,0,0
+Rhode Island,2024-04-01,65+ years,11,0,0
+South Carolina,2020-08-01,0 - 17 years,7,0,0
+South Carolina,2020-09-01,18 to 49 years,14,0,0
+South Carolina,2020-10-01,0 - 17 years,20,0,0
+South Carolina,2020-11-01,18 to 49 years,10,0,0
+South Carolina,2020-11-01,50 to 64 years,11,0,0
+South Carolina,2020-12-01,65+ years,46,0,4
+South Carolina,2021-01-01,18 to 49 years,31,0,0
+South Carolina,2021-01-01,50 to 64 years,20,0,1
+South Carolina,2021-02-01,50 to 64 years,13,0,0
+South Carolina,2021-02-01,65+ years,21,0,3
+South Carolina,2021-03-01,50 to 64 years,76,0,1
+South Carolina,2021-03-01,65+ years,10,0,1
+South Carolina,2021-06-01,50 to 64 years,14,0,1
+South Carolina,2021-07-01,65+ years,33,0,3
+South Carolina,2021-08-01,0 - 17 years,92,0,0
+South Carolina,2021-08-01,18 to 49 years,140,0,6
+South Carolina,2021-09-01,18 to 49 years,61,0,1
+South Carolina,2021-09-01,50 to 64 years,15,0,0
+South Carolina,2021-10-01,50 to 64 years,27,0,0
+South Carolina,2021-12-01,50 to 64 years,8,0,0
+South Carolina,2022-01-01,0 - 17 years,108,0,0
+South Carolina,2022-02-01,18 to 49 years,30,0,0
+South Carolina,2022-02-01,50 to 64 years,2,0,0
+South Carolina,2022-02-01,65+ years,37,0,6
+South Carolina,2022-03-01,50 to 64 years,17,0,0
+South Carolina,2022-05-01,50 to 64 years,29,0,0
+South Carolina,2022-08-01,0 - 17 years,43,0,0
+South Carolina,2022-08-01,18 to 49 years,121,0,0
+South Carolina,2022-08-01,65+ years,17,0,0
+South Carolina,2022-12-01,0 - 17 years,20,0,0
+South Carolina,2023-01-01,65+ years,41,0,0
+South Carolina,2023-02-01,50 to 64 years,52,0,0
+South Carolina,2023-03-01,65+ years,24,0,1
+South Carolina,2023-04-01,65+ years,12,0,0
+South Carolina,2023-08-01,18 to 49 years,24,0,0
+South Carolina,2023-09-01,0 - 17 years,29,0,0
+South Carolina,2023-09-01,50 to 64 years,24,0,0
+South Carolina,2023-12-01,0 - 17 years,55,0,0
+South Carolina,2024-01-01,50 to 64 years,13,0,0
+South Carolina,2024-01-01,65+ years,13,0,0
+South Carolina,2024-02-01,65+ years,91,0,0
+South Dakota,2021-08-01,18 to 49 years,91,0,0
+South Dakota,2022-02-01,50 to 64 years,92,0,2
+Tennessee,2020-08-01,50 to 64 years,37,0,4
+Tennessee,2020-08-01,65+ years,80,0,21
+Tennessee,2020-10-01,0 - 17 years,19,0,0
+Tennessee,2020-10-01,18 to 49 years,30,0,1
+Tennessee,2020-11-01,65+ years,16,3,3
+Tennessee,2020-12-01,0 - 17 years,17,0,0
+Tennessee,2020-12-01,18 to 49 years,36,0,0
+Tennessee,2020-12-01,50 to 64 years,8,0,0
+Tennessee,2021-02-01,18 to 49 years,24,0,0
+Tennessee,2021-02-01,65+ years,25,0,2
+Tennessee,2021-03-01,18 to 49 years,11,0,0
+Tennessee,2021-03-01,65+ years,7,0,2
+Tennessee,2021-07-01,18 to 49 years,25,0,0
+Tennessee,2021-07-01,50 to 64 years,16,0,1
+Tennessee,2021-08-01,0 - 17 years,7,0,0
+Tennessee,2021-08-01,65+ years,92,15,22
+Tennessee,2021-09-01,18 to 49 years,100,0,0
+Tennessee,2021-09-01,65+ years,1,0,0
+Tennessee,2021-10-01,18 to 49 years,77,0,1
+Tennessee,2021-10-01,50 to 64 years,97,0,6
+Tennessee,2021-11-01,50 to 64 years,46,0,2
+Tennessee,2021-12-01,18 to 49 years,86,0,1
+Tennessee,2021-12-01,50 to 64 years,13,0,0
+Tennessee,2022-01-01,0 - 17 years,41,0,0
+Tennessee,2022-01-01,18 to 49 years,92,0,0
+Tennessee,2022-01-01,50 to 64 years,8,0,0
+Tennessee,2022-01-01,65+ years,25,0,2
+Tennessee,2022-02-01,18 to 49 years,109,0,1
+Tennessee,2022-07-01,18 to 49 years,35,0,0
+Tennessee,2022-08-01,0 - 17 years,11,0,0
+Tennessee,2022-08-01,18 to 49 years,54,0,0
+Tennessee,2022-11-01,0 - 17 years,18,0,0
+Tennessee,2022-11-01,65+ years,103,0,6
+Tennessee,2022-12-01,18 to 49 years,11,0,0
+Tennessee,2023-02-01,0 - 17 years,2,0,0
+Tennessee,2023-02-01,50 to 64 years,17,0,0
+Tennessee,2023-03-01,18 to 49 years,15,0,0
+Tennessee,2023-08-01,50 to 64 years,12,0,0
+Tennessee,2023-09-01,50 to 64 years,15,0,0
+Tennessee,2023-11-01,0 - 17 years,10,0,0
+Tennessee,2024-02-01,0 - 17 years,23,0,0
+Texas,2020-07-01,18 to 49 years,37,0,1
+Texas,2020-07-01,65+ years,54,0,5
+Texas,2020-08-01,18 to 49 years,122,0,7
+Texas,2020-09-01,0 - 17 years,13,0,0
+Texas,2020-09-01,50 to 64 years,18,0,0
+Texas,2020-10-01,18 to 49 years,19,0,0
+Texas,2020-11-01,18 to 49 years,67,0,0
+Texas,2020-12-01,0 - 17 years,175,0,2
+Texas,2020-12-01,18 to 49 years,222,0,1
+Texas,2020-12-01,65+ years,26,0,0
+Texas,2021-01-01,0 - 17 years,36,0,0
+Texas,2021-01-01,18 to 49 years,388,0,6
+Texas,2021-01-01,50 to 64 years,135,0,3
+Texas,2021-02-01,50 to 64 years,2,0,0
+Texas,2021-03-01,18 to 49 years,31,0,0
+Texas,2021-03-01,50 to 64 years,17,0,1
+Texas,2021-04-01,50 to 64 years,15,0,3
+Texas,2021-05-01,18 to 49 years,8,0,0
+Texas,2021-07-01,18 to 49 years,16,0,0
+Texas,2021-08-01,18 to 49 years,208,0,1
+Texas,2021-09-01,0 - 17 years,98,0,0
+Texas,2021-09-01,18 to 49 years,73,0,0
+Texas,2021-09-01,50 to 64 years,3,0,0
+Texas,2021-10-01,0 - 17 years,18,0,0
+Texas,2021-10-01,18 to 49 years,62,0,0
+Texas,2021-11-01,0 - 17 years,73,0,0
+Texas,2021-11-01,18 to 49 years,55,0,0
+Texas,2022-01-01,0 - 17 years,221,0,0
+Texas,2022-01-01,18 to 49 years,461,0,1
+Texas,2022-01-01,50 to 64 years,52,0,0
+Texas,2022-01-01,65+ years,23,0,0
+Texas,2022-02-01,50 to 64 years,50,0,0
+Texas,2022-03-01,18 to 49 years,15,0,0
+Texas,2022-04-01,50 to 64 years,1,0,0
+Texas,2022-05-01,65+ years,8,0,0
+Texas,2022-06-01,0 - 17 years,11,0,0
+Texas,2022-06-01,18 to 49 years,19,0,0
+Texas,2022-06-01,50 to 64 years,14,0,0
+Texas,2022-07-01,18 to 49 years,127,0,1
+Texas,2022-08-01,18 to 49 years,92,0,0
+Texas,2022-08-01,50 to 64 years,2,0,0
+Texas,2022-08-01,65+ years,74,0,11
+Texas,2022-09-01,50 to 64 years,73,0,0
+Texas,2022-12-01,0 - 17 years,24,0,0
+Texas,2022-12-01,18 to 49 years,3,0,0
+Texas,2023-03-01,18 to 49 years,26,0,0
+Texas,2023-04-01,65+ years,17,0,2
+Texas,2023-09-01,65+ years,15,0,0
+Texas,2023-10-01,18 to 49 years,44,0,0
+Texas,2023-11-01,18 to 49 years,24,0,0
+Texas,2024-01-01,18 to 49 years,13,0,0
+Texas,2024-02-01,18 to 49 years,26,0,0
+Texas,2024-02-01,65+ years,17,0,0
+Utah,2020-05-01,18 to 49 years,14,0,0
+Utah,2020-06-01,50 to 64 years,25,0,0
+Utah,2020-09-01,50 to 64 years,8,0,0
+Utah,2020-10-01,65+ years,45,0,0
+Utah,2021-01-01,0 - 17 years,22,0,0
+Utah,2021-03-01,0 - 17 years,27,0,0
+Utah,2021-10-01,50 to 64 years,64,0,0
+Utah,2021-12-01,18 to 49 years,21,0,0
+Utah,2022-01-01,0 - 17 years,92,0,2
+Utah,2022-01-01,50 to 64 years,92,0,0
+Utah,2022-02-01,0 - 17 years,22,0,0
+Utah,2022-02-01,18 to 49 years,46,0,0
+Utah,2022-02-01,50 to 64 years,31,0,0
+Utah,2024-01-01,50 to 64 years,16,0,0
+Utah,2024-05-01,65+ years,25,0,0
+Vermont,2022-01-01,50 to 64 years,87,0,0
+Vermont,2023-02-01,50 to 64 years,4,0,0
+Virginia,2020-04-01,50 to 64 years,16,0,1
+Virginia,2020-05-01,0 - 17 years,15,0,0
+Virginia,2020-07-01,18 to 49 years,34,0,0
+Virginia,2020-08-01,18 to 49 years,23,0,0
+Virginia,2020-09-01,18 to 49 years,11,0,0
+Virginia,2020-11-01,18 to 49 years,108,0,0
+Virginia,2020-12-01,18 to 49 years,15,0,0
+Virginia,2021-01-01,0 - 17 years,92,0,0
+Virginia,2021-01-01,18 to 49 years,96,0,1
+Virginia,2021-05-01,0 - 17 years,8,0,0
+Virginia,2021-11-01,50 to 64 years,93,0,2
+Virginia,2021-12-01,0 - 17 years,92,0,4
+Virginia,2021-12-01,18 to 49 years,190,0,1
+Virginia,2022-01-01,18 to 49 years,11,0,0
+Virginia,2022-01-01,65+ years,92,0,9
+Virginia,2022-02-01,Missing,20,0,0
+Virginia,2022-05-01,18 to 49 years,10,0,0
+Virginia,2022-06-01,50 to 64 years,92,0,0
+Virginia,2022-07-01,18 to 49 years,81,0,0
+Virginia,2022-07-01,Missing,20,0,0
+Virginia,2022-08-01,0 - 17 years,35,0,0
+Virginia,2022-08-01,18 to 49 years,84,0,0
+Virginia,2022-08-01,65+ years,11,0,0
+Virginia,2022-09-01,65+ years,10,0,0
+Virginia,2022-12-01,18 to 49 years,13,0,0
+Virginia,2023-09-01,65+ years,24,0,1
+Virginia,2023-10-01,65+ years,29,0,0
+Virginia,2023-12-01,0 - 17 years,11,0,0
+Virginia,2024-02-01,50 to 64 years,45,0,1
+Washington,2020-04-01,18 to 49 years,21,0,0
+Washington,2020-07-01,65+ years,16,0,4
+Washington,2020-08-01,50 to 64 years,8,0,2
+Washington,2020-08-01,65+ years,11,0,2
+Washington,2020-10-01,18 to 49 years,11,0,0
+Washington,2020-11-01,18 to 49 years,9,0,0
+Washington,2020-12-01,50 to 64 years,125,0,8
+Washington,2021-01-01,50 to 64 years,11,0,0
+Washington,2021-06-01,0 - 17 years,25,0,0
+Washington,2021-08-01,18 to 49 years,15,0,1
+Washington,2021-10-01,50 to 64 years,17,0,0
+Washington,2021-12-01,18 to 49 years,112,0,2
+Washington,2021-12-01,50 to 64 years,30,0,12
+Washington,2022-01-01,0 - 17 years,92,0,0
+Washington,2022-01-01,50 to 64 years,122,0,4
+Washington,2022-02-01,0 - 17 years,13,0,0
+Washington,2022-02-01,18 to 49 years,92,0,2
+Washington,2022-05-01,0 - 17 years,66,0,1
+Washington,2022-06-01,0 - 17 years,9,0,0
+Washington,2022-07-01,65+ years,14,0,0
+Washington,2022-08-01,18 to 49 years,23,0,0
+Washington,2022-09-01,18 to 49 years,17,0,0
+Washington,2023-01-01,50 to 64 years,92,0,9
+Washington,2023-02-01,65+ years,34,0,13
+Washington,2023-09-01,18 to 49 years,5,0,0
+Washington,2024-02-01,18 to 49 years,21,0,2
+Wisconsin,2020-07-01,0 - 17 years,11,0,0
+Wisconsin,2020-08-01,18 to 49 years,25,0,1
+Wisconsin,2020-09-01,18 to 49 years,92,0,1
+Wisconsin,2020-11-01,18 to 49 years,184,0,6
+Wisconsin,2020-11-01,50 to 64 years,200,0,13
+Wisconsin,2021-01-01,65+ years,7,0,1
+Wisconsin,2021-04-01,0 - 17 years,33,0,0
+Wisconsin,2021-08-01,0 - 17 years,13,0,1
+Wisconsin,2021-09-01,50 to 64 years,165,0,12
+Wisconsin,2021-11-01,0 - 17 years,92,0,0
+Wisconsin,2022-01-01,0 - 17 years,58,0,1
+Wisconsin,2022-01-01,18 to 49 years,209,0,2
+Wisconsin,2022-02-01,18 to 49 years,92,0,1
+Wisconsin,2022-03-01,50 to 64 years,4,0,0
+Wisconsin,2022-09-01,18 to 49 years,92,0,0
+Wisconsin,2022-10-01,18 to 49 years,92,0,0
+Wisconsin,2022-11-01,0 - 17 years,11,0,0

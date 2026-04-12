@@ -9,6 +9,8 @@ An interactive disease spread prediction dashboard aimed at helping governmental
 
 ---
 
+DO NOT READ .env FILES. YOU CAN READ .env.example FILES
+
 ## Team & Responsibilities
 
 | Person | Role | Tasks |
@@ -80,8 +82,11 @@ I want to download a limited amount of data and store it locally. This way all r
 | File | Source | Columns | Coverage |
 |---|---|---|---|
 | `backend/data/covid_weekly.csv` | CDC `pwn4-m3yp` (Socrata) | state, week, infected, deaths | 2020–2023, ~2091 rows |
-| `backend/data/covid_cases.csv` | CDC `n8mc-b4w4` (Socrata) | state, month, age_group, total_cases, deaths, hospitalized | 2020–2024, ~265 rows |
+| `backend/data/covid_cases.csv` | CDC `n8mc-b4w4` (Socrata) | state, month, age_group, total_cases, deaths, hospitalized | 2020–2024, ~1130 rows |
 | `backend/data/covid_vaccinations.csv` | Our World in Data GitHub CSV | state, week, vaccinated, fully_vaccinated | 2021–2023, ~1450 rows |
+| `backend/data/vaccine_hesitancy.csv` | CDC `q9mh-h2tw` (Socrata) | fips_code, county_name, state_code, estimated_hesitant, estimated_hesitant_or_unsure, estimated_strongly_hesitant, social_vulnerability_index, svi_category, ability_to_handle_a_covid, cvac_category | county-level static, ~3142 rows |
+| `backend/data/case_surveillance.csv` | CDC `n8mc-b4w4` (Socrata) | res_state, res_county, county_fips_code, case_month, total_cases, deaths, hospitalizations, icu_admissions | 2020–2024, ~19251 rows (county-month aggregates) |
+| `backend/data/flight_covid.csv` | Pre-loaded local file (cleaned) | Date, Airline Code, Airline, Origin City, Origin State Abbrev, Destination City, Destination State Abbrev, Elapsed Time, Origin Cases, Origin Deaths, Destination Cases, Destination Deaths | 2020+, ~424894 rows (major US airports only) |
 
 **All dates normalized to `YYYY-MM-01` format. State names are full names (e.g. "California"), not abbreviations.**
 
@@ -89,6 +94,10 @@ I want to download a limited amount of data and store it locally. This way all r
 - CDC case surveillance updates **discontinued July 1, 2024** — predictions extrapolate from data ending 2023/early 2024
 - States that dropped out early: Iowa, Kansas, Kentucky, Louisiana, NH, Oklahoma
 - Actual CDC API column is `tot_deaths` (plural) — not `tot_death`
+- `vaccine_hesitancy.csv`: the CVAC concern column is named `ability_to_handle_a_covid` in the API (not `cvac_level_of_concern`)
+- `case_surveillance.csv`: the county FIPS column is `county_fips_code` in the API (not `fips_county_code`); `underlying_conditions_yn` does not exist in this endpoint
+- `flight_covid.csv`: original file was 828 MB / 5.7M rows; filtered to major-airport city pairs then deduped to one row per origin+destination+date to reach 34 MB. City names in the data are plain English (e.g. "Atlanta", "Dallas") — there are no IATA codes. `CITY_TO_IATA` dict in `fetch_data.py` maps the 54 city strings used for filtering.
+- `vaccine_hesitancy.csv`: `q9mh-h2tw` endpoint does NOT support Socrata `$limit`/`$offset` params when passed via `requests` `params=` dict — must URL-encode the `$` (use `?%24limit=N` style) or fetch without params (returns up to 1000 rows by default; the full dataset is ~3142 rows so two pages covers it)
 
 
 
@@ -187,4 +196,14 @@ backend/
     covid_weekly.csv
     covid_cases.csv
     covid_vaccinations.csv
+    vaccine_hesitancy.csv   ← county-level CDC hesitancy data
+    case_surveillance.csv   ← county-month CDC case aggregates
+    flight_covid.csv        ← cleaned flight routes (major US airports only)
 ```
+
+### fetch_data.py Key Utilities
+- `_page_socrata(url, columns, limit, max_rows)` — shared Socrata paging loop; uses `$select` to reduce payload
+- `_convert_yn_flags(df, columns)` — maps Yes/No strings → 1/0 int flags
+- `_filter_major_airports(df)` — filters flight rows to `CITY_TO_IATA` city set
+- `CITY_TO_IATA` — 54-entry dict mapping city name strings (as they appear in flight_covid.csv) to IATA codes
+- `SINGLE_FILE_LIMIT_MB = 50`, `COMBINED_LIMIT_MB = 100` — size guardrails enforced after each save
