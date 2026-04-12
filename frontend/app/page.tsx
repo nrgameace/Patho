@@ -111,7 +111,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto mb-16">
             <ScrollReveal containerClassName="mb-8">
               <h2 className="font-mono text-2xl md:text-4xl font-bold text-foreground leading-tight text-center">
-                Our models have been trained on hundreds of millions of real-world data points
+                Built on real CDC surveillance data across every US county
               </h2>
             </ScrollReveal>
           </div>
@@ -121,40 +121,40 @@ export default function Home() {
               <ScrollReveal delay={0}>
                 <div className="glass-card rounded-xl p-6 text-center">
                   <div className="font-mono font-bold text-3xl md:text-4xl text-foreground mb-2">
-                    512M
+                    3,142
                   </div>
                   <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">
-                    Cases Tracked
+                    Counties Covered
                   </div>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <div className="glass-card rounded-xl p-6 text-center">
                   <div className="font-mono font-bold text-3xl md:text-4xl text-foreground mb-2">
-                    6.2M
+                    424K+
                   </div>
                   <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">
-                    Deaths Recorded
+                    Flight Routes Analyzed
                   </div>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <div className="glass-card rounded-xl p-6 text-center">
                   <div className="font-mono font-bold text-3xl md:text-4xl text-foreground mb-2">
-                    78%
+                    51
                   </div>
                   <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">
-                    Model Accuracy
+                    States & Territories
                   </div>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>
                 <div className="glass-card rounded-xl p-6 text-center">
                   <div className="font-mono font-bold text-3xl md:text-4xl text-foreground mb-2">
-                    4
+                    2020–27
                   </div>
                   <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">
-                    Diseases Monitored
+                    Timeline Coverage
                   </div>
                 </div>
               </ScrollReveal>
