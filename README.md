@@ -36,36 +36,36 @@ We successfully bridged the gap between massive, raw CSV datasets and a clean, h
 
 ***
 
-## 💻 Getting Started (Local Development)
+# 💻 Getting Started (Local Development)
 
-### Prerequisites
+## Prerequisites
 * Node.js & `pnpm`
 * Python 3.13
 
-### 1. Backend Setup (macOS / Linux)
+## 1. Backend Setup (macOS / Linux)
 Open your terminal and navigate to the backend directory:
 bash
 cd backend
 
-# Create a virtual environment using Python 3.13
+### Create a virtual environment using Python 3.13
 python3.13 -m venv venv
 source venv/bin/activate
 
-# Install dependencies
+### Install dependencies
 pip install fastapi uvicorn pandas
 
-# Start the backend server
+### Start the backend server
 uvicorn main:app --reload --port 8000
 
-### 2. Frontend Setup
+## 2. Frontend Setup
 In a new terminal window, navigate to the frontend directory:
 
 cd frontend
 
-# Install packages
+### Install packages
 pnpm install
 
-# Start the Next.js development server
+### Start the Next.js development server
 pnpm dev
 
 Open http://localhost:3000 in your browser to interact with Patho!
