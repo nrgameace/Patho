@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://34.42.246.161:8000"
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://34.42.246.161.nip.io"
 
 export interface CountyData {
   id: string
