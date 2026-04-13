@@ -1,4 +1,4 @@
-# 🦠 Patho | Dynamic Epidemic Intelligence
+# 🦠 Patho | Dynamic Epidemic Intelligence - WashU 2026 Google DevFest Best Use of Featherless AI
 
 [![Next.js](https://img.shields.io/badge/Next.js-Black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
